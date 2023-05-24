@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZKS6L1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-DXNDZKS6L1');
+</script>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../source/style.css">
+     <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../source/prism.css">
+     <meta name="description" content="Java 2023 Updated Cheatsheet for All Level Programmers. Java Basics, OOP Concepts in Java, Exception Handling.">
+     <link rel="canonical" href="https://www.thirulang.online/cheatsheets/java-cheatsheet-latest">
+     <title>Java Latest Cheatsheet 2023</title>
+</head>
+<body>
+     <header>
+          <nav>
+               <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+               <ul>
+                    <li><a href="../cheatsheets/python-latest-cheatsheet.html">Python</a></li>
+                    <li><a href="../cheatsheets/r-language-cheatsheet-latest.html">R</a></li>
+               </ul>
+          </nav>
+       
+     </header>
+ 
+     <main>
+          
+<section class="content">
+<h1>Java Cheatsheet 2023</h1>
+<p>Java has stood the test of time as one of the most popular and versatile programming languages. It continues to be a go-to choice for developing enterprise-level applications, Android apps, and various other software solutions. As technology progresses and new updates are introduced, developers need to keep up with the latest features, APIs, and best practices in order to write efficient and modern Java code.
+</p>
+
+<h2>Table of Contents: </h2>
+<ol>
+     <li>Hello World!</li>
+     <li>Comments
+     </li>
+     <li>Variables </li>
+     <li>Data Types</li>
+     <li>Operators
+     </li>
+     <li>Conditional Statements (if, else, else if)
+     </li>
+     <li>Loops (for, while, do-while)
+     </li>
+     <li>Switch Statement
+     </li>
+     <li>Break and Continue statements
+     </li>
+     <li>Arrays</li>
+     <li>Classes and Objects</li>
+     <li>Constructors</li>
+     <li>Instance Variables and Methods</li>
+     <li>Access Modifiers (public, private, protected)</li>
+     <li>Inheritance</li>
+     <li>Interfaces</li>
+     <li>Try-Catch Blocks</li>
+     <li>Multiple Catch Blocks</li>
+     <li>Finally Block</li>
+     <li>Custom Exception</li>
+     <li>Input and Output</li>
+     <li>File Handling</li>
+     <li>Creating Threads</li>
+     <li>Synchronization</li>
+     <li>Thread Pools
+     </li>
+     <li>Thread Communication
+     </li>
+
+</ol>
+
+<h2>1.  Hello World!
+</h2>
+<p>This is a simple code used to demonstrate the basic syntax of a programming language. </p>
+
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class HelloWorld {
+     public static void main(String[] args) {
+          System.out.println("Hello, World!"); // Output: Hello, World
+     }
+}
+      
+</code></pre>
+<p>The System.out.println() statement is used to display the specified text or variable value in the console. In this case, it prints "Hello, World!" as the output.
+</p>
+
+<h2>2. Comments
+</h2>
+<p>Comments in Java are used to add explanatory notes or annotations to the code. They are ignored by the compiler and have no impact on the execution of the program.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+// single-line comment
+
+/*
+*  multi-line comment.
+* It can span multiple lines.
+*/
+
+</code></pre>
+
+<h2>3. Variables
+</h2>
+<p> In programming, variables are utilized to hold and manipulate data. They have a specific data type, a name, and a value.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">dataType variableName = value;
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class Example {
+     public static void main(String[] args) {
+          // Declaration and initialization of variables
+          int age = 25;
+          double pi = 3.14;
+          String message = "Hello, World!";
+     
+          // Output the values of the variables
+          System.out.println("Age: " + age);
+          System.out.println("Pi: " + pi);
+          System.out.println("Message: " + message);
+     }
+     }
+    
+// Output
+/*
+Age: 25
+Pi: 3.14
+Message: Hello, World!
+*/
+</code></pre>
+
+
+<h2>4. Data Types
+</h2>
+<p>In Java, data types define the type of data that can be stored in a variable.</p>
+ 
+<pre><code class="language-java">
+int: Used to store whole numbers (integers).
+double: Used to store floating-point numbers with decimal places.
+boolean: Used to store either true or false values.
+char: Used to store a single character.
+String: Used to store a sequence of characters.
+</code></pre>
+
+
+<h3>Example: </h3>
+<pre><code class="language-java">
+int age = 25;
+double pi = 3.14;
+boolean isSunny = true;
+char grade = 'A';
+String message = "Hello, World!";
+</code></pre>
+
+<h2>5. Operators
+</h2>
+<p></p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+1. Arithmetic Operators:
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulus (%)
+
+2. Comparison Operators:
+Equal to (==)
+Not equal to (!=)
+Greater than (>)
+Less than (&lt;)
+Greater than or equal to (>=)
+Less than or equal to (&lt;=)
+
+3. Logical Operators:
+Logical AND (&&)
+Logical OR (||)
+Logical NOT (!)
+
+4. Assignment Operators:
+Assignment (=)
+Addition assignment (+=)
+Subtraction assignment (-=)
+Multiplication assignment (*=)
+Division assignment (/=)
+Modulus assignment (%=)
+
+5. Increment and Decrement Operators:
+Increment (++)
+Decrement (--)
+
+6. Bitwise Operators:
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise NOT (~)
+Left Shift (&lt;&lt;)
+Right Shift (>>)
+Unsigned Right Shift (>>>)
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class OperatorExample {
+public static void main(String[] args) {
+     int num1 = 5;
+     int num2 = 3;
+     int result;
+
+     // Arithmetic Operators
+     result = num1 + num2;
+     System.out.println("Addition: " + result);
+
+     result = num1 - num2;
+     System.out.println("Subtraction: " + result);
+
+     result = num1 * num2;
+     System.out.println("Multiplication: " + result);
+
+     result = num1 / num2;
+     System.out.println("Division: " + result);
+
+     result = num1 % num2;
+     System.out.println("Modulus: " + result);
+
+     // Comparison Operators
+     boolean isEqual = (num1 == num2);
+     System.out.println("Equal to: " + isEqual);
+
+     boolean isNotEqual = (num1 != num2);
+     System.out.println("Not equal to: " + isNotEqual);
+
+     boolean isGreater = (num1 > num2);
+     System.out.println("Greater than: " + isGreater);
+
+     boolean isLess = (num1 &lt; num2);
+     System.out.println("Less than: " + isLess);
+
+     boolean isGreaterOrEqual = (num1 >= num2);
+     System.out.println("Greater than or equal to: " + isGreaterOrEqual);
+
+     boolean isLessOrEqual = (num1 &lt;= num2);
+     System.out.println("Less than or equal to: " + isLessOrEqual);
+
+     // Logical Operators
+     boolean logicalAnd = (num1 > 0) && (num2 &lt; 10);
+     System.out.println("Logical AND: " + logicalAnd);
+
+     boolean logicalOr = (num1 > 0) || (num2 &lt; 10);
+     System.out.println("Logical OR: " + logicalOr);
+
+     boolean logicalNot = !(num1 > 0);
+     System.out.println("Logical NOT: " + logicalNot);
+
+     // Assignment Operators
+     result = num1;
+     System.out.println("Assignment: " + result);
+
+     result += num2;
+     System.out.println("Addition assignment: " + result);
+
+     result -= num2;
+     System.out.println("Subtraction assignment: " + result);
+
+     result *= num2;
+     System.out.println("Multiplication assignment: " + result);
+
+     result /= num2;
+     System.out.println("Division assignment: " + result);
+
+     result %= num2;
+     System.out.println("Modulus assignment: " + result);
+
+     // Increment and Decrement Operators
+     num1++;
+     System.out.println("Increment: " + num1);
+
+     num2--;
+     System.out.println("Decrement: " + num2);
+
+     // Bitwise Operators
+     result = num1 & num2;
+     System.out.println("Bitwise AND: " + result);
+
+     result = num1 | num2;
+     System.out.println("Bitwise OR: " + result);
+
+     result = num1 ^ num2;
+     System.out.println("Bitwise XOR: " + result);
+
+     result = ~num1;
+     System.out.println("Bitwise NOT: " + result);
+
+     result = num1 &lt;&lt; 2;
+     System.out.println("Left shift: " + result);
+
+     result = num1 >> 2;
+     System.out.println("Right shift: " + result);
+
+     result = num1 >>> 2;
+     System.out.println("Unsigned right shift: " + result);
+}
+}
+
+/* Output
+Addition: 8
+Subtraction: 2
+Multiplication: 15
+Division: 1
+Modulus: 2
+Equal to: false
+Not equal to: true
+Greater than: true
+Less than: false
+Greater than or equal to: true
+Less than or equal to: false
+Logical AND: true
+Logical OR: true
+Logical NOT: false
+Assignment: 5
+Addition assignment: 8
+Subtraction assignment: 5
+Multiplication assignment: 15
+Division assignment: 5
+Modulus assignment: 2
+Increment: 6
+Decrement: 2
+Bitwise AND: 0
+Bitwise OR: 7
+Bitwise XOR: 5
+Bitwise NOT: -6
+Left shift: 24
+Right shift: 1
+Unsigned right shift: 1
+*/
+      
+</code></pre>
+
+
+<h2>6. Conditional Statements (if, else, else if)
+</h2>
+<p>Conditional statements allow you to execute different blocks of code based on specified conditions.</p>
+<p>The if statement is used to execute a block of code if a certain condition is true.
+</p>
+<p>The else statement is used in conjunction with the if statement and executes a block of code if the if condition is false.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+if (condition) {
+     // code if the condition is true
+} else if (condition) {
+     // code block if the condition is true
+} else {
+     // code block if none of the conditions are true
+}
+
+      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+int a = 10;
+
+if (a > 0) {
+     System.out.println("a is positive");
+} else if (a &lt; 0) {
+     System.out.println("a is negative");
+} else {
+     System.out.println("a is zero");
+}
+
+// Output: a is positive
+</code></pre>
+
+
+<h2>7. Loops (for, while, do-while)
+</h2>
+<p>The <strong>for</strong> loop allows you to execute a block of code a fixed number of times.
+</p>
+<p>The <strong>while</strong> loop executes a specific block of code repeatedly until a certain condition remains true.</p>
+<p>The <strong>do-while</strong> loop is similar to the while loop, but it guarantees that the code inside the loop is executed at least once, as the condition is evaluated after the loop body.
+</p>
+ 
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+for (initialization; condition; update) {
+     // code to be executed
+}
+
+while (condition) {
+     // code to be executed
+}
+
+do {
+     // code to be executed
+} while (condition);
+
+
+      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+// for loop
+System.out.println("for loop");
+for (int i = 1; i &lt;= 5; i++) {
+     System.out.println("Count: " + i);
+}
+
+
+
+// while loop
+System.out.println("while loop");
+int a = 5;
+while (a > 0) {
+    System.out.println("Count: " + a);
+    a--;
+}
+
+// do-while loop
+System.out.println("do-while loop");
+int j = 1;
+do {
+    System.out.println("Count: " + j);
+    j++;
+} while (j &lt;= 5);
+
+/ * Output: 
+for loop
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+while loop
+Count: 5
+Count: 4
+Count: 3
+Count: 2
+Count: 1
+do-while loop
+Count: 1
+Count: 2
+Count: 3
+Count: 4
+Count: 5
+*/    
+</code></pre>
+
+
+<h2>8. Switch Statement
+</h2>
+<p>The switch statement allows you to select one of many code blocks to be executed based on a specified expression.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+switch (expression) {
+case value1:
+     // code block if the expression matches value1
+     break;
+case value2:
+     // code block  if the expression matches value2
+     break;
+...
+default:
+     // code tblock if none of the cases match the expression
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+int day = 3;
+String dayName;
+
+switch (day) {
+     case 1:
+          dayName = "Monday";
+          break;
+     case 2:
+          dayName = "Tuesday";
+          break;
+     case 3:
+          dayName = "Wednesday";
+          break;
+     case 4:
+          dayName = "Thursday";
+          break;
+     case 5:
+          dayName = "Friday";
+          break;
+     default:
+          dayName = "Invalid day";
+          break;
+}
+
+System.out.println("Day: " + dayName); // Day: Wednesday
+</code></pre>
+
+
+<h2>9. Break and Continue statements
+</h2>
+<p>The <strong>break</strong> statement is used to terminate the execution of a loop or switch statement, while the <strong>continue</strong> statement is used to skip the remaining code inside a loop and move to the next iteration.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+// break syntax
+break;
+
+// continue syntax
+continue;
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+for (int i = 1; i &lt;= 10; i++) {
+     if (i == 5) {
+          break; // terminates the loop when i is 5
+     }
+     System.out.println("Count: " + i);
+}
+
+for (int i = 1; i &lt;= 10; i++) {
+     if (i % 2 == 0) {
+          continue; // skips the remaining code and moves to the next iteration for even numbers
+     }
+     System.out.println("Count: " + i);
+}     
+</code></pre>
+
+
+
+<h2>10. Arrays</h2>
+<p>An array is a data structure that allows you to store multiple values of the same type in a single variable. It provides an indexed collection of elements, where each element can be accessed using its index.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+// Declaration syntax
+dataType[] arrayName; // preferred syntax
+or
+dataType arrayName[]; // alternative syntax
+
+// Initialization syntax
+dataType[] arrayName = new dataType[arrayLength];
+or
+dataType[] arrayName = {element1, element2, ..., elementN};
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+int[] numbers = new int[5]; // declares an array of integers with length 5
+
+numbers[0] = 10; // assigns 10 to the first element
+numbers[1] = 20; // assigns 20 to the second element
+// ...
+numbers[4] = 50; // assigns 50 to the fifth element
+
+String[] names = {"Alice", "Bob", "Charlie"}; // declares and initializes an array of strings
+ 
+</code></pre>
+
+
+<h2>11. Classes and Objects
+</h2>
+<p>A class is a blueprint for creating objects. It defines the properties (attributes) and behaviors (methods) that objects of that class can have. An object is an instance of a class, which represents a specific entity or concept.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+// Class Declaration
+class ClassName {
+     // instance variables (attributes)
+     // constructors
+     // methods
+}
+
+// Object Creation
+ClassName objectName = new ClassName();
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Car {
+     String color;
+     int year;
+
+     void startEngine() {
+          System.out.println("Engine started.");
+     }
+
+     void accelerate() {
+          System.out.println("Car is accelerating.");
+     }
+     }
+
+     public class Main {
+     public static void main(String[] args) {
+          Car myCar = new Car(); // creates an instance of the Car class
+          myCar.color = "Red"; // sets the color of the car
+          myCar.year = 2021; // sets the year of the car
+          myCar.startEngine(); // invokes the startEngine() method
+     }
+}
+      
+</code></pre>
+
+
+<h2>12. Constructors
+</h2>
+<p>A constructor is a unique method employed for initializing objects within a class. It is automatically invoked when an object is created. Constructors share the same name as the class and do not specify a return type.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+ClassName() {
+     // constructor code
+}
+     
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Person {
+     String name;
+     int age;
+
+     Person() {
+          name = "John";
+          age = 30;
+     }
+
+     void displayInfo() {
+          System.out.println("Name: " + name);
+          System.out.println("Age: " + age);
+     }
+}
+
+Person person = new Person(); // creates an instance of the Person class and invokes the constructor
+person.displayInfo(); // invokes the displayInfo() method
+
+</code></pre>
+
+<h2>13. Instance Variables and Methods
+</h2>
+<p>Instance variables are variables declared inside a class but outside any method. They hold the state or data of an object. Instance methods are methods defined in a class that can access and manipulate the instance variables of an object.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+// Instance Variable Declaration
+accessModifier dataType variableName;
+
+// Instance Method Declaration
+accessModifier returnType methodName(parameters) {
+     // method code
+ }
+ 
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Circle {
+     double radius; // instance variable
+
+     double calculateArea() { // instance method
+          return 3.14 * radius * radius;
+     }
+}
+
+Circle myCircle = new Circle();
+myCircle.radius = 5.0;
+double area = myCircle.calculateArea();
+System.out.println("Area: " + area);
+
+</code></pre>
+
+<h2>14. Access Modifiers (public, private, protected)
+</h2>
+<p>Access modifiers determine the visibility or accessibility of classes, methods, and variables in Java.
+</p>
+<p><strong>public:</strong> The public access modifier allows classes, methods, and variables to be accessed from anywhere, both within and outside the class or package.
+</p>
+<p><strong>private:</strong> The private access modifier restricts the access to the class itself. Private methods and variables cannot be accessed from outside the class.
+</p>
+<p><strong>protected: </strong>The protected access modifier allows access within the same class, package, and subclasses. Protected methods and variables can be accessed within the class, subclasses, and same package.
+</p>
+
+<h2>15. Inheritance
+</h2>
+<p>Inheritance is a mechanism in Java that allows a class (called the subclass or derived class) to inherit the properties and behaviors of another class (called the superclass or base class). The subclass can extend the functionality of the superclass and add its own additional features.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+class Subclass extends Superclass {
+     // subclass members
+}
+     
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Animal { // superclass
+     void eat() {
+          System.out.println("Animal is eating.");
+     }
+}
+
+class Dog extends Animal { // subclass
+     void bark() {
+          System.out.println("Dog is barking.");
+     }
+}
+
+public class Main {
+public static void main(String[] args) {
+     Dog dog = new Dog();
+     dog.eat(); // inherited from Animal class
+     dog.bark();
+}
+}
+      
+</code></pre>
+
+<h2>16. Interfaces
+</h2>
+<p> In Java, an interface is like a promise that classes make to follow certain rules. It tells them what methods they need to have. It specifies a set of methods that implementing classes must define. An interface cannot be instantiated; it only provides a way to define a common behavior for multiple classes.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+// Interface Declaration
+interface InterfaceName {
+     // method declarations
+}
+    
+// Implementing an Interface
+class ClassName implements InterfaceName {
+     // class members
+ }
+ 
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+interface Vehicle {
+void start();
+void stop();
+}
+
+class Car implements Vehicle {
+     public void start() {
+          System.out.println("Car started.");
+     }
+
+     public void stop() {
+          System.out.println("Car stopped.");
+     }
+}
+
+public class Main {
+public static void main(String[] args) {
+     Car car = new Car();
+     car.start();
+     car.stop();
+}
+}
+      
+</code></pre>
+
+<h2>17. Try-Catch Blocks
+</h2>
+<p>Try-catch blocks are used to handle exceptions (errors) that may occur during the execution of a program. The code inside the try block is monitored for exceptions, and if an exception occurs, it is caught and processed in the catch block.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+try {
+     // code that may throw an exception
+} catch (ExceptionType exceptionObject) {
+     // code to handle the exception
+}
+      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class Main {
+public static void main(String[] args) {
+int[] numbers = {1, 2, 3, 4, 5};
+
+     try {
+          System.out.println(numbers[10]); // accessing an out-of-bounds index
+     } catch (ArrayIndexOutOfBoundsException e) {
+          System.out.println("Array index out of bounds exception caught.");
+     }
+}
+}
+      
+</code></pre>
+
+
+<h2>18. Multiple Catch Blocks
+</h2>
+<p>Multiple catch blocks can be used to handle different types of exceptions separately. Each catch block can catch a specific type of exception, allowing for customized error handling based on the type of exception.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+try {
+     // code that may throw an exception
+} catch (ExceptionType1 exceptionObject1) {
+     // code to handle exceptionType1
+} catch (ExceptionType2 exceptionObject2) {
+     // code to handle exceptionType2
+} // more catch blocks if needed
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class Main {
+public static void main(String[] args) {
+     try {
+          int[] numbers = {1, 2, 3};
+          System.out.println(numbers[10]); // accessing an out-of-bounds index
+     } catch (ArrayIndexOutOfBoundsException e) {
+          System.out.println("Array index out of bounds exception caught.");
+     } catch (NullPointerException e) {
+          System.out.println("Null pointer exception caught.");
+     }
+}
+}
+      
+</code></pre>
+
+
+<h2>19. Finally Block
+</h2>
+<p>The finally block works together with the try-catch block to define a code section that will always run, regardless of whether an exception is encountered or not. The code inside the finally block is guaranteed to be executed, regardless of any exceptions that may arise.
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+try {
+     // code that may throw an exception
+} catch (ExceptionType exceptionObject) {
+     // code to handle the exception
+} finally {
+     // code to be executed regardless of an exception
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+public class Main {
+public static void main(String[] args) {
+     try {
+          int result = 10 / 0; // division by zero
+          System.out.println("Result: " + result); // this line will not be executed
+     } catch (ArithmeticException e) {
+          System.out.println("Exception caught: Division by zero.");
+     } finally {
+          System.out.println("Finally block executed.");
+     }
+}
+}
+      
+</code></pre>
+
+<h2>20. Custom Exception
+</h2>
+<p>A custom exception, also known as a user-defined exception, allows you to create your own exception classes by extending the existing exception classes provided by Java. Custom exceptions can be used to handle specific scenarios or errors in your program.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-java">
+class CustomException extends Exception {
+     // constructors, methods, etc.
+}      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-java">
+class InsufficientBalanceException extends Exception {
+InsufficientBalanceException(String message) {
+     super(message);
+}
+}
+
+class BankAccount {
+private double balance;
+
+void withdraw(double amount) throws InsufficientBalanceException {
+     if (amount > balance) {
+          throw new InsufficientBalanceException("Insufficient balance.");
+     }
+     balance -= amount;
+     System.out.println("Withdrawal successful. Remaining balance: " + balance);
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+     BankAccount account = new BankAccount();
+     account.deposit(1000);
+     try {
+          account.withdraw(1500); // throws InsufficientBalanceException
+     } catch (InsufficientBalanceException e) {
+          System.out.println(e.getMessage());
+     }
+}
+}
+      
+</code></pre>
+
+
+<h2>21. Input and Output
+</h2>
+<p>Input and output (I/O) in Java involves reading input from a source (such as the user or a file) and writing output to a destination (such as the console or a file). The java.util.Scanner class can be used for input, and the System.out.println() method can be used for output to the console.
+</p>
+
+<h3>Example: </h3>
+<pre><code class="language-java">
+import java.util.Scanner;
+
+public class Main {
+     public static void main(String[] args) {
+          Scanner scanner = new Scanner(System.in);
+          System.out.print("Enter your name: ");
+          String name = scanner.nextLine();
+          System.out.println("Hello, " + name + "!");
+          scanner.close();
+     }
+}
+
+// Writing Output to Console
+
+public class Main {
+     public static void main(String[] args) {
+         int number = 42;
+         System.out.println("The number is: " + number);
+     }
+ }
+ 
+</code></pre>
+ 
+
+<h2>22. File Handling
+</h2>
+<p>File handling in Java allows you to read from and write to files on your system. The java.io package provides classes like File, FileReader, FileWriter, BufferedReader, and BufferedWriter to handle file operations.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+// Reading from a File
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+
+public class Main {
+     public static void main(String[] args) {
+          try {
+               File file = new File("example.txt");
+               FileReader reader = new FileReader(file);
+               int character;
+               while ((character = reader.read()) != -1) {
+                    System.out.print((char) character);
+               }
+               reader.close();
+          } catch (IOException e) {
+               System.out.println("Error reading file: " + e.getMessage());
+          }
+     }
+}
+     
+// Writing to a File
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
+public class Main {
+    public static void main(String[] args) {
+        try {
+            File file = new File("example.txt");
+            FileWriter writer = new FileWriter(file);
+            writer.write("Hello, World!");
+            writer.close();
+            System.out.println("Data written to file.");
+        } catch (IOException e) {
+            System.out.println("Error writing to file: " + e.getMessage());
+        }
+    }
+}
+
+</code></pre>
+
+
+<h2>23. Creating Threads
+</h2>
+<p></p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+// Extending Thread class    
+class MyThread extends Thread {
+     public void run() {
+          // code to be executed in the thread
+     }
+     }
+
+     public class Main {
+     public static void main(String[] args) {
+          MyThread thread = new MyThread();
+          thread.start(); // starts the thread
+     }
+}
+
+
+  
+// Implementing Runnable interface
+class MyRunnable implements Runnable {
+     public void run() {
+         // code to be executed in the thread
+     }
+ }
+ 
+ public class Main {
+     public static void main(String[] args) {
+         Thread thread = new Thread(new MyRunnable());
+         thread.start(); // starts the thread
+     }
+ }
+ 
+</code></pre>
+
+
+<h2>24. Synchronization
+</h2>
+<p>Synchronization is used in multithreaded programming to control access to shared resources. It ensures that only one thread can access the shared resource at a time, preventing data inconsistency or race conditions.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Counter {
+private int count = 0;
+
+public synchronized void increment() {
+     count++;
+}
+
+public synchronized int getCount() {
+     return count;
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+     Counter counter = new Counter();
+
+     // Create multiple threads accessing the shared Counter object
+     // Each thread increments the count multiple times
+     // Synchronization ensures data consistency
+}
+}
+      
+</code></pre>
+
+
+<h2>25. Thread Pools
+</h2>
+<p>Thread pools provide a way to manage and reuse a pool of worker threads. Instead of creating a new thread for every task, a thread pool allows you to submit tasks to the pool, which assigns the tasks to available threads. This improves performance by reducing thread creation overhead.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+
+public class Main {
+public static void main(String[] args) {
+     ExecutorService executor = Executors.newFixedThreadPool(5);
+
+     // Submit tasks to the thread pool
+     for (int i = 0; i &lt; 10; i++) {
+          Runnable task = new MyTask();
+          executor.execute(task);
+     }
+
+     executor.shutdown(); // Shutdown the thread pool
+}
+}
+
+class MyTask implements Runnable {
+public void run() {
+     // code to be executed in the task
+}
+}
+     
+</code></pre>
+
+
+<h2>26. Thread Communication
+</h2>
+<p>Thread communication allows threads to synchronize their actions and exchange data. The wait(), notify(), and notifyAll() methods of the Object class are used for thread communication.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-java">
+class Data {
+private String message;
+private boolean isProduced = false;
+
+public synchronized void produce(String message) {
+     while (isProduced) {
+          try {
+               wait(); // wait until consumer consumes the previous message
+          } catch (InterruptedException e) {
+               e.printStackTrace();
+          }
+     }
+     this.message = message;
+     isProduced = true;
+     notify(); // notify the consumer that a new message is available
+}
+
+public synchronized String consume() {
+     while (!isProduced) {
+          try {
+               wait(); // wait until producer produces a message
+          } catch (InterruptedException e) {
+               e.printStackTrace();
+          }
+     }
+     isProduced = false;
+     notify(); // notify the producer that the message has been consumed
+     return message;
+}
+}
+
+public class Main {
+public static void main(String[] args) {
+     Data data = new Data();
+
+     Thread producerThread = new Thread(() -> {
+          for (int i = 0; i &lt; 5; i++) {
+               String message = "Message " + (i + 1);
+               data.produce(message);
+               System.out.println("Produced: " + message);
+          }
+     });
+
+     Thread consumerThread = new Thread(() -> {
+          for (int i = 0; i &lt; 5; i++) {
+               String message = data.consume();
+               System.out.println("Consumed: " + message);
+          }
+     });
+
+     producerThread.start();
+     consumerThread.start();
+}
+}
+      
+</code></pre>
+
+</section>
+     </main>
+     <footer>
+          <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+          <p>Copyright &#169;	 2023 langthiru. All rights reserved</p>
+          <a href="../about/privacy-policy.html">Privacy Policy</a>
+          <a href="../about/terms-of-use.html">Terms of Use</a>
+     </footer>
+     <script src="../source/prism.js"></script>
+</body>
+</html>

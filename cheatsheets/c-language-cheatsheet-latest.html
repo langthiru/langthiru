@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZKS6L1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-DXNDZKS6L1');
+</script>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../source/style.css">
+     <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../source/prism.css">
+     <meta name="description" content="C language beginner to advanced cheatsheet 2023 includes all concepts such as basics, arrays, files, structures, enum, and etc.">
+     <link rel="canonical" href="https://www.thirulang.online/cheatsheets/c-language-cheatsheet-latest">
+
+     <title>Complete C Language Cheatsheet 2023</title>
+</head>
+<body>
+     <header>
+          <nav>
+               <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+               <ul>
+                    <li><a href="../cheatsheets/python-latest-cheatsheet.html">Python</a></li>
+                    <li><a href="../cheatsheets/java-cheatsheet-latest.html">Java</a></li>
+               </ul>
+          </nav>
+       
+     </header>
+ 
+     <main>
+          
+<section class="content">
+<h1>C Cheatsheet 2023</h1>
+<p>C programming language has been the foundation of software development for decades, known for its efficiency, portability, and versatility. As technology continues to advance, it remains vital for developers to stay up to date with the latest features, libraries, and coding practices in the C language.
+</p>
+
+<h2>Table of Contents: </h2>
+<ol>
+     <li>Comments
+     </li>
+     <li>Variables </li>
+     <li>Data Types</li>
+     <li>Operators</li>
+     <li>printf() and scanf() Functions
+     </li>
+     <li>Formatted Input and Output
+     </li>
+     <li>Conditional Statements (if, else if, else)
+     </li>
+     <li>Loops (for, while, do-while)
+     </li>
+     <li>Switch Statement
+     </li>
+     <li>Break and Continue statements
+     </li>
+     <li>Arrays</li>
+     <li>Functions</li>
+     <li>Pointers
+     </li>
+     <li>Structures</li>
+     <li>Unions</li>
+     <li>File Handling</li>
+     <li>Preprocessor Directives</li>
+     <li>Enumerations</li>
+     <li>Recursion
+     </li>
+</ol>
+
+<h2>1.  Comments
+</h2>
+<p>Comments in C are used to add explanatory or descriptive text within the source code. They are ignored by the compiler and have no effect on the execution of the program. </p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+// Single-line comment in C
+
+/*
+multi-line comment
+in C
+*/
+
+</code></pre>
+ 
+
+<h2>2. Variables
+</h2>
+<p>Variables in C are used to store and manipulate data. They have a specific data type, a name, and a value. Before using a variable, it needs to be declared, specifying its data type.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">data_type variable_name;
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+int age;        // Declaration of an integer variable named "age"
+age = 25;       // Assignment of the value 25 to the variable "age"
+</code></pre>
+
+<h2>3. Data Types
+</h2>
+<p>Data types in C specify the type and size of data that a variable can store. They define the operations that can be performed on the variable.</p>
+<p>1. int: Represents integer values, which can be positive, negative, or zero.</p>
+<p>2. float: Represents single-precision floating-point n</p>
+<p>3. double: Represents double-precision floating-point numbers with higher precision than float.</p>
+<p>4. char: Represents a single character enclosed in single quotes.</p>
+<p>5. _Bool: Represents Boolean values (true or false).</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+int variable_name;
+float variable_name;
+double variable_name;
+char variable_name;
+_Bool variable_name;
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+int num = 10;
+float pi = 3.14;
+double distance = 10.5;
+char grade = 'A';
+_Bool isPassed = 1;  // 1 represents true
+</code></pre>
+
+
+<h2>4. Operators
+</h2>
+<p>Operators in C are symbols or characters that perform specific operations on operands (variables or values). They are used to manipulate and evaluate data in expressions. C provides a wide range of operators, including arithmetic, relational, logical, assignment, bitwise, and more.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+1. Arithmetic Operators:
+
+Addition: "+"
+Subtraction: "-"
+Multiplication: "*"
+Division: "/"
+modulo(Remainder): "%"
+Increment: "++"
+Decrement: "--"
+
+2. Relational Operators:
+
+Equal to: "=="
+Not equal to: "!="
+Greater than: ">"
+Less than: "&lt;"
+Greater than or equal to: ">="
+Less than or equal to: "&lt;="
+
+3. Logical Operators:
+
+Logical AND: "&&"
+Logical OR: "||"
+Logical NOT: "!"
+
+4. Assignment Operators:
+
+Assignment: "="
+Addition assignment: "+="
+Subtraction assignment: "-="
+Multiplication assignment: "*="
+Division assignment: "/="
+Modulo assignment: "%="
+ 
+5. Bitwise Operators:
+
+Bitwise AND: "&"
+Bitwise OR: "|"
+Bitwise XOR: "^"
+Bitwise NOT: "~"
+Left shift: "&lt;&lt;"
+Right shift: ">>"
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+#include &lt;stdio.h>
+
+int main() {
+     int a = 10;
+     int b = 5;
+
+     // Arithmetic Operators
+     int addition = a + b;
+     int subtraction = a - b;
+     int multiplication = a * b;
+     int division = a / b;
+     int modulus = a % b;
+
+     // Relational Operators
+     int isEqual = (a == b);
+     int isNotEqual = (a != b);
+     int isGreater = (a > b);
+     int isLess = (a &lt; b);
+     int isGreaterOrEqual = (a >= b);
+     int isLessOrEqual = (a &lt;= b);
+
+     // Logical Operators
+     int logicalAnd = (a > 0) && (b > 0);
+     int logicalOr = (a > 0) || (b > 0);
+     int logicalNotA = !(a > 0);
+     int logicalNotB = !(b > 0);
+
+     // Assignment Operators
+     int assign = a;
+     int addToAssign = 5;
+     assign += addToAssign;
+     int subtractFromAssign = 3;
+     assign -= subtractFromAssign;
+     int multiplyWithAssign = 2;
+     assign *= multiplyWithAssign;
+     int divideByAssign = 2;
+     assign /= divideByAssign;
+     int modulusOfAssign = 3;
+     assign %= modulusOfAssign;
+
+     // Increment and Decrement Operators
+     int increment = 5;
+     int decrement = 5;
+     increment++;
+     decrement--;
+
+     // Bitwise Operators
+     int bitwiseAnd = a & b;
+     int bitwiseOr = a | b;
+     int bitwiseXor = a ^ b;
+     int bitwiseNotA = ~a;
+     int leftShift = a &lt;&lt; 2;
+     int rightShift = a >> 2;
+
+     printf("Arithmetic Operators:\n");
+     printf("Addition: %d\n", addition);
+     printf("Subtraction: %d\n", subtraction);
+     printf("Multiplication: %d\n", multiplication);
+     printf("Division: %d\n", division);
+     printf("Modulus: %d\n\n", modulus);
+
+     printf("Relational Operators:\n");
+     printf("Is equal: %d\n", isEqual);
+     printf("Is not equal: %d\n", isNotEqual);
+     printf("Is greater: %d\n", isGreater);
+     printf("Is less: %d\n", isLess);
+     printf("Is greater or equal: %d\n", isGreaterOrEqual);
+     printf("Is less or equal: %d\n\n", isLessOrEqual);
+
+     printf("Logical Operators:\n");
+     printf("Logical AND: %d\n", logicalAnd);
+     printf("Logical OR: %d\n", logicalOr);
+     printf("Logical NOT for a: %d\n", logicalNotA);
+     printf("Logical NOT for b: %d\n\n", logicalNotB);
+
+     printf("Assignment Operators:\n");
+     printf("Assign: %d\n", assign);
+     printf("Add to assign: %d\n", assign);
+     printf("Subtract from assign: %d\n", assign);
+     printf("Multiply with assign: %d\n", assign);
+     printf("Divide by assign: %d\n", assign);
+     printf("Modulus of assign: %d\n\n", assign);
+
+     printf("Increment and Decrement Operators:\n");
+     printf("Increment: %d\n", increment);
+     printf("Decrement: %d\n\n", decrement);
+
+     printf("Bitwise Operators:\n");
+     printf("Bitwise AND: %d\n", bitwiseAnd);
+     printf("Bitwise OR: %d\n", bitwiseOr);
+     printf("Bitwise XOR: %d\n", bitwiseXor);
+     printf("Bitwise NOT for a: %d\n", bitwiseNotA);
+     printf("Left Shift: %d\n", leftShift);
+     printf("Right Shift: %d\n", rightShift);
+
+     return 0;
+}
+  
+/* Output:
+Arithmetic Operators:
+Addition: 15
+Subtraction: 5
+Multiplication: 50
+Division: 2
+Modulus: 0
+
+Relational Operators:
+Is equal: 0
+Is not equal: 1
+Is greater: 1
+Is less: 0
+Is greater or equal: 1
+Is less or equal: 0
+
+Logical Operators:
+Logical AND: 1
+Logical OR: 1
+Logical NOT for a: 0
+Logical NOT for b: 0
+
+Assignment Operators:
+Assign: 0
+Add to assign: 0
+Subtract from assign: 0
+Multiply with assign: 0
+Divide by assign: 0
+Modulus of assign: 0
+
+Increment and Decrement Operators:
+Increment: 6
+Decrement: 4
+
+Bitwise Operators:
+Bitwise AND: 0
+Bitwise OR: 15
+Bitwise XOR: 15
+Bitwise NOT for a: -11
+Left Shift: 40
+Right Shift: 2
+*/
+</code></pre>
+
+
+<h2>5. printf() and scanf() Functions
+</h2>
+<p>The <strong>printf()</strong> function is employed to present formatted output on the console or terminal. It enables the display of values and text while providing options for precise formatting.
+</p>
+<p>The <strong>scanf()</strong> function is used to read formatted input from the user via the keyboard. It allows you to accept input and assign it to variables based on the specified format.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+printf("format_string", arguments);
+scanf("format_string", &variable1, &variable2, ...);
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+int main(){
+int age = 25;
+printf("My age is %d years.\n", age); // My age is 25 years.
+ 
+int num;
+printf("Enter a number: ");   // Enter a number: 10
+scanf("%d", &num);
+printf("Number: %d",num);  // Number: 10
+return 0;
+}
+</code></pre>
+
+
+<h2>6. Formatted Input and Output
+</h2>
+<p>In C, both printf() and scanf() functions support formatting options using format specifiers. Format specifiers are placeholders that define the type and format of the data being inputted or outputted.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+%d: Used for integers.
+%f: Used for floating-point numbers.
+%c: Used for characters.
+%s: Used for strings.
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+int num = 10;
+float pi = 3.14;
+char grade = 'A';
+
+printf("Number: %d\n", num);
+printf("Pi: %.2f\n", pi);
+printf("Grade: %c\n", grade);
+
+/* Output: 
+Number: 10
+Pi: 3.14
+Grade: A
+*/
+</code></pre>
+
+
+<h2>7. Conditional Statements (if, else if, else)
+</h2>
+<p>The if statement allows you to execute a block of code based on a condition. If the condition evaluates to true, the code enclosed within the if block is executed.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+// if  
+if (condition) {
+     // Code block for execution
+}
+ 
+//  else if
+if (condition1) {
+     // Code block for execution
+ }
+ else if (condition2) {
+     // Code block for execution
+ }
+
+// else
+ if (condition) {
+     // Code block for execution only when true
+ }
+ else {
+     // Code block for execution only when false
+ }
+ 
+ 
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+// if
+int age = 20;
+if (age >= 18) {
+     printf("You are an adult.");
+}
+ 
+// else if
+int score = 85;
+if (score >= 90) {
+    printf("Excellent!");
+}
+else if (score >= 80) {
+    printf("Good!");
+}
+else if (score >= 70) {
+    printf("Average.");
+}
+else {
+    printf("Keep working hard!");
+}
+
+// else
+int num = 10;
+if (num % 2 == 0) {
+    printf("Even number.");
+}
+else {
+    printf("Odd number.");
+}
+
+
+</code></pre>
+
+
+<h2>8. Loops (for, while, do-while)
+</h2>
+<p>The <strong>for</strong> loop allows you to repeatedly execute a block of code for a specified number of times. It consists of an initialization, a condition, and an increment/decrement expression.</p>
+<p>The <strong>while</strong> loop repeatedly executes a block of code as long as the specified condition is true. It verifies the condition prior to each iteration.
+</p>
+<p>The <strong>do-while</strong> loop is similar to the while loop but checks the condition after executing the block of code. It guarantees that the code is executed at least once.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+// for loop
+for (initialization; condition; increment/decrement) {
+     // each iteration code  
+}
+
+// while loop
+while (condition) {
+     // each iteration code  
+}
+ 
+// do while loop
+do {
+     // each iteration code  
+} while (condition);
+ 
+      
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+// for
+for (int a = 1; a &lt;= 5; a++) {
+     printf("%d ", a);
+}
+// Output: 1 2 3 4 5
+
+
+
+// while
+int i = 5;
+
+while (i &gt;= 0) {
+    printf("%d ", i);
+    i--;
+}
+// Output: 5 4 3 2 1 0
+
+
+//do-while
+
+int i = 1;
+do {
+    printf("%d ", i);
+    i++;
+} while (i &lt;= 5);
+// Output: 1 2 3 4 5
+
+</code></pre>
+
+
+<h2>9. Switch Statement
+</h2>
+<p>The switch statement provides a convenient way to choose between multiple cases based on the value of an expression. It simplifies the code when dealing with multiple conditions.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+switch (expression) {
+     case value1:
+          //  if expression equals value1
+          break;
+     case value2:
+          //   if expression equals value2
+          break;
+     // Additional cases...
+     default:
+          //  if expression doesn't match any case
+}
+      
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+int choice = 2;
+switch (choice) {
+     case 1:
+          printf("You selected Option 1.");
+          break;
+     case 2:
+          printf("You selected Option 2.");
+          break;
+     case 3:
+          printf("You selected Option 3.");
+          break;
+     default:
+          printf("Invalid option.");
+}
+// Output: You selected Option 2.     
+</code></pre>
+
+
+
+<h2>10. Break and Continue statements
+</h2>
+<p>The <strong>break</strong> statement is employed to prematurely terminate a loop or switch statement. When encountered, it immediately ends the current iteration of the loop or entirely exits the switch statement.
+</p>
+
+<p>The <strong>continue</strong> statement is used to skip the remaining code within a loop iteration and proceed to the next iteration. It allows you to bypass certain parts of the loop's code.</p>
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+break;
+
+continue;
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+// break
+for (int i = 1; i &lt;= 10; i++) {
+     if (i == 5) {
+          break;
+     }
+     printf("%d ", i);
+}
+// Output: 1 2 3 4  
+
+
+// continue
+for (int i = 1; i *lt;= 5; i++) {
+     if (i == 3) {
+         continue;
+     }
+     printf("%d ", i);
+ }
+// Output: 1 2 4 5
+</code></pre>
+
+
+<h2>11. Arrays
+</h2>
+<p>Arrays in C are used to store multiple values of the same data type in a contiguous block of memory. They provide an efficient way to manage collections of data elements.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">data_type array_name[array_size];
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+int numbers[5]; // Declaration of an integer array with size 5
+   
+int numbers[5] = {1, 2, 3, 4, 5};
+int secondElement = numbers[1]; // Accessing the second element (index 1) of the array
+
+</code></pre>
+
+
+<h2>12. Functions
+</h2>
+<p>Functions in C are reusable blocks of code that perform a specific task. They help in modularizing code, making it easier to understand, maintain, and reuse.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+return_type function_name(parameter_list) {
+     // function code block
+     return value;
+}     
+
+function_name(arguments_list)   // function call
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+// Function that will returns the sum of two numbers
+int sum(int a, int b) {
+     int result = a + b;
+     return result;
+}
+
+int x = 5, y = 3;
+int addition = sum(x, y); // Calling the sum() function
+
+      
+</code></pre>
+
+<h2>13. Pointers
+</h2>
+<p>Pointers in C are variables that store memory addresses. They allow direct manipulation and access to data in memory. Pointers are powerful tools for dynamic memory allocation, passing arguments by reference, and working with complex data structures.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">data_type *pointer_name;
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">data_type *pointer_name;
+</code></pre>
+<h3>Using Pointers</h3>
+<p>Used to obtain the memory address of a variable.</p>
+<pre><code class="language-c">
+int num = 10;
+int *ptr = &num; // Assigning the address of num to ptr
+</code></pre>
+<p>Used to access the value stored at a memory address.</p>
+<pre><code class="language-c">
+int num = 10;
+int *ptr = &num;
+int value = *ptr; // Dereferencing ptr to get the value stored at the address
+</code></pre>
+
+<h2>14. Structures
+</h2>
+<p>Structures in C are user-defined data types that allow you to group different variables with different data types under a single name. They provide a convenient way to represent complex data structures.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+struct structure_name {
+     data_type member1;
+     data_type member2;
+     // Additional members...
+};
+      
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+struct Person {
+     char name[20];
+     int age;
+};
+struct Person person1;
+strcpy(person1.name, "Krishna");
+person1.age = 19;
+
+printf("Name: %s\n", person1.name);
+printf("Age: %d\n", person1.age);
+     
+/* Output
+Name: Krishna
+Age: 19
+*/
+</code></pre>
+
+<h2>15. Unions
+</h2>
+<p>Unions in C are similar to structures as they allow you to group variables of different data types. However, unions can only store one value at a time, sharing the same memory space for all members. The size of a union is determined by its largest member.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+union union_name {
+     data_type member1;
+     data_type member2;
+     // Additional members...
+};      
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+union Data {
+     int num;
+     float value;
+};
+
+union Data data;
+data.num = 10;
+printf("Number: %d\n", data.num);
+
+data.value = 3.14;
+printf("Value: %.2f\n", data.value);
+
+/*
+Output: 
+Number: 10
+Value: 3.14
+*/
+        
+</code></pre>
+<p><strong>Note:</strong> When a new value is assigned to one member of a union, the previous value is overwritten and becomes inaccessible.
+</p>
+
+<h2>16. File Handling
+</h2>
+<p>File handling in C allows you to read from and write to files on disk. It provides a way to store and retrieve data persistently. C provides standard library functions for file operations.
+</p>
+<p>To perform file handling in C, you need to follow these steps:
+</p>
+<p>1. Open the file using the fopen() function, which returns a file pointer.
+</p>
+<p>Perform the desired read or write operations using functions like fread(), fwrite(), fprintf(), fscanf(), etc.
+</p>
+<p>Close the file using the fclose() function to release system resources.
+</p>
+
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+// writing to a file
+
+#include &lt;stdio.h&gt;
+
+int main() {
+     FILE *file = fopen("data.txt", "w");
+     if (file == NULL) {
+          printf("File could not be opened.");
+          return 1;
+     }
+
+     fprintf(file, "Hello, World!");
+
+     fclose(file);
+
+     return 0;
+}
+
+</code></pre>
+
+<h2>17. Preprocessor Directives
+</h2>
+<p>Preprocessor directives in C are special instructions that are processed by the preprocessor before the compilation of the program. They begin with a hash symbol (#) and provide instructions for the preprocessor to modify or include certain sections of code.
+</p>
+ 
+<pre><code class="language-c">
+#include: Used to include header files.
+#define: Used to define constants or macros.
+#ifdef and #endif: Used for conditional compilation.
+#pragma: Used for implementation-specific instructions.
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+#define PI 3.14159
+
+int main() {
+     float radius = 5.0;
+     float area = PI * radius * radius;
+
+     printf("Area of the circle: %.2f", area);
+
+     return 0;
+}
+     
+</code></pre>
+
+
+<h2>18. Enumerations
+</h2>
+<p>Enumerations in C allow you to define a set of named constants. They provide a way to represent a group of related values with meaningful names, making the code more readable and maintainable.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+enum enum_name {
+     value1,
+     value2,
+     // Additional values...
+};      
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+enum Day {
+     MON,
+     TUE,
+     WED,
+     THU,
+     FRI,
+     SAT,
+     SUN
+};
+
+int main() {
+     enum Day today = WED;
+
+     if (today == SAT || today == SUN) {
+          printf("It's the weekend!");
+     } else {
+          printf("It's a weekday.");
+     }
+
+     return 0;
+}
+          
+</code></pre>
+
+
+<h2>19. Recursion
+</h2>
+<p>Recursion in C refers to the process of a function calling itself directly or indirectly. It allows the solution of complex problems by breaking them down into smaller, simpler instances.
+</p>
+<p>A recursive function consists of two parts:
+</p>
+<p>1. Base Case: A condition that specifies when the recursion should stop.
+</p>
+<p>2. Recursive Case: The part of the function where it calls itself to solve a smaller instance of the problem.
+</p>
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-c">
+#include &lt;stdio.h&gt;
+
+int factorial(int n) {
+     if (n == 0) {
+          return 1; // factorial of 0 is 1
+     } else {
+          return n * factorial(n - 1); // Recursive case: n! = n * (n-1)!
+     }
+}
+
+int main() {
+     int num = 3;
+     int result = factorial(num);
+
+     printf("The Factorial of %d is %d", num, result);  
+
+     return 0;
+}
+
+// Output:
+// The Factorial of 3 is 6
+     
+</code></pre>
+
+ 
+          </section>
+     </main>
+     <footer>
+          <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+          <p>Copyright &#169;	 2023 langthiru. All rights reserved</p>
+          <a href="../about/privacy-policy.html">Privacy Policy</a>
+          <a href="../about/terms-of-use.html">Terms of Use</a>
+     </footer>
+     <script src="../source/prism.js"></script>
+</body>
+</html>

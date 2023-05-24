@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZKS6L1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-DXNDZKS6L1');
+</script>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../source/style.css">
+     <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../source/prism.css">
+    <meta name="description" content="Python 2023 Beginner to Advanced cheatsheet that includes basics, lists, tupes, files, control flow statements in python, functions, oop, and, etc.">
+    <link rel="canonical" href="https://www.thirulang.online/cheatsheets/python-latest-cheatsheet">
+    <title>Perfect Python Cheatsheet 2023</title>
+</head>
+<body>
+     <header>
+          <nav>
+               <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+               <ul>
+                    <li><a href="../cheatsheets/c-language-cheatsheet-latest.html">C</a></li>
+                    <li><a href="../cheatsheets/java-cheatsheet-latest.html">Java</a></li>
+               </ul>
+          </nav>
+       
+     </header>
+ 
+     <main>
+          
+<section class="content">
+<h1>Python Cheatsheet 2023</h1>
+<p>This Python Latest cheatsheet is designed to be a trusted companion for programmers of all levels, providing quick access to essential language features, syntax, and best practices.</p>
+<p>From the basics to advanced techniques, the Python 2023 cheatsheet covers a wide range of topics in a concise and user-friendly format.</p>
+
+<h2>Table of Contents</h2>
+<ol>
+     <li>Comments
+     </li>
+     <li>Variables</li>
+     <li>Data Types</li>
+     <li>Operators
+     </li>
+     <li>Conditional Statements (if, else, elif)
+     </li>
+     <li>Loops (for, while)
+     </li>
+     <li>Break and Continue statements
+     </li>
+     <li>Lists
+     </li>
+     <li>Tuples
+     </li>
+     <li>Dictionaries
+     </li>
+
+     <li>Sets
+     </li>
+     <li>Functions</li>
+     <li>Importing Modules
+     </li>
+     <li>Creating Modules
+     </li>
+     <li>Using Packages
+     </li>
+     <li>Opening and Closing Files
+     </li>
+     <li>Reading and Writing Files
+     </li>
+     <li>Exception Handling
+     </li>
+     <li>Classes and Objects
+     </li>
+     <li>Inheritance
+     </li>
+
+     <li>Polymorphism
+     </li>
+     <li>Encapsulation
+     </li>
+     <li>String Methods</li>
+     <li>Decorators
+     </li>
+     <li>Generators
+     </li>
+     <li>Context Managers
+     </li>
+     <li>Try-Except Blocks
+     </li>
+     <li>Handling Multiple Exceptions
+     </li>
+     <li>Raising Exceptions
+     </li>
+      <li> Useful Built-in Functions</li>
+</ol>
+
+<h2>1. Python Comments</h2>
+<p> Comments in Python are used to add explanatory notes or annotations within the code.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-c">
+# for single line
+
+'''
+for multi-line
+''''
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-py">
+a = 3 # a is 10 
+
+a = 3
+b = 79
+
+'''
+a is 3 
+b is 79 
+(We recomond you to use single line comments)
+'''
+
+</code></pre>
+
+
+<h2>2. Variables</h2>
+<p>Variables play a crucial role in computer programming by providing a means to store and retrieve data in computer memory. They act as containers that hold specific values, which can be of various types.
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+varialeName = value
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Creating and assigning values to variables
+age = 25
+name = "John Doe"
+pi = 3.14
+     
+</code></pre>
+
+
+<h2>3.  Data Types</h2>
+<p>Data types define the nature of the values that can be stored in variables.</p>
+<p>Integer (int): Whole numbers without decimal points.
+</p>
+<p>Float: Numbers with decimal points.
+</p>
+<p>String (str): Sequence of characters enclosed in single or double quotes.
+</p>
+<p>Boolean (bool): Represents either True or False.</p>
+
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Examples of different data types
+age = 25  # integer
+temperature = 98.6  # float
+name = "John Doe"  # string
+is_sunny = True  # boolean  
+</code></pre>
+
+
+<h2>4. Operators</h2>
+<p> Operators are symbols or special keywords used to perform operations on variables and values.</p>
+
+<p>1. Arithmetic Operators: (+, -, *, /, %, ** - Exponentiation, //-	Floor division)</p>
+<p>2. Comparision Operators: (==, !=, &gt;, &lt;, &gt;=, &lt;=)</p>
+<p>3. Assignment Operators: (=, +=, -=, *=, /=, %=) </p>
+<p>4. Logical Operators: (and, or, not)</p>
+<p>5. Membership Operators: (in, not in) </p>
+<p>6. Identity Operators: (is, is not) </p>
+ 
+
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Examples of operators
+a = 5
+b = 2
+
+# Arithmetic operators
+addition = a + b  # 7
+subtraction = a - b  # 3
+multiplication = a * b  # 10
+division = a / b  # 2.5
+modulo = a % b  # 1
+
+# Comparison operators
+equal_to = a == b  # False
+not_equal_to = a != b  # True
+greater_than = a > b  # True
+less_than = a &lt; b  # False
+greater_than_or_equal_to = a >= b  # True
+less_than_or_equal_to = a &lt;= b  # False
+
+# Assignment operators
+c = 10
+c += 5  # c is now 15
+c -= 3  # c is now 12
+c *= 2  # c is now 24
+c /= 4  # c is now 6.0
+c %= 5  # c is now 1.0
+     
+# Logical operators
+x = 5
+y = 10
+z = 3
+
+logical_and = (x &lt; y) and (y &lt; z)  # False
+logical_or = (x &lt; y) or (y &lt; z)  # True
+logical_not = not(x &lt; y)  # False
+
+# Membership operators
+fruits = ['apple', 'banana', 'orange']
+is_apple = 'apple' in fruits  # True
+is_mango = 'mango' not in fruits  # True
+
+# Identity operators
+a = 5
+b = 5
+c = [1, 2, 3]
+d = [1, 2, 3]
+
+is_same_object = a is b  # True
+is_not_same_object = c is not d  # True
+
+</code></pre>
+
+
+<h2>5. Conditional Statements (if, else, elif)
+</h2>
+<p>Conditional statements in Python allow you to control the flow of your program based on certain conditions. They provide a way to execute specific blocks of code depending on whether a condition is true or false.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+# if statement
+if condition:
+     # Code to execute if the condition is true
+
+# elif statement
+if condition1:
+    # Code to execute if condition1 is true
+elif condition2:
+    # Code to execute if condition1 is false and condition2 is true
+
+# else statement
+if condition1:
+    # Code to execute if condition1 is true
+else:
+    # Code to execute if all previous conditions were false
+
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# if 
+# Checking if a number is positive
+number = 5
+
+if number > 0:
+    print("The number is positive")
+# Output: The number is positive
+
+
+# elif
+# if a number is positive, negative, or zero
+number = -2
+
+if number > 0:
+    print("The number is positive")
+elif number &lt; 0:
+    print("The number is negative") 
+
+elif number == 0:
+     print("The number is zero")
+# output: The number is negative
+
+
+# else
+
+number = 0
+
+if number > 0:
+    print("The number is positive")
+elif number &lt; 0:
+    print("The number is negative")
+else:
+    print("The number is zero")
+
+# output: The number is zero
+
+</code></pre>
+
+
+<h2>6. Loops (for, while)
+</h2>
+<p>Loops are fundamental control structures in Python that allow you to repeatedly execute a block of code. They provide a way to automate repetitive tasks and iterate over a sequence of elements. </p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+# for Loop 
+
+for item in sequence:
+     # Code block
+
+
+# while loop 
+while condition:
+     # Code block 
+
+     
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# for Loop
+# Iterating over a list of fruits
+fruits = ["apple", "banana", "orange"]
+
+for fruit in fruits:
+     print(fruit)
+'''
+Output: 
+apple
+banana
+orange
+'''
+
+
+# while Loop
+# to print numbers from 1 to 5 using a while loop
+number = 1
+
+while number &lt;= 5:
+    print(number)
+    number += 1
+'''
+1
+2
+3
+4
+5
+'''
+
+
+</code></pre>
+
+
+
+<h2>7. Break and Continue statements
+</h2>
+ 
+<p>The <strong>break</strong> statement is utilized to terminate a loop before its normal completion.</p>
+<p>The <strong>continue</strong> statement is used to skip the remaining code within a loop iteration and move to the next iteration. When encountered, it bypasses the rest of the code in the loop block and proceeds with the next iteration.</p>
+
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# break 
+# Breaking out of a loop when a certain condition is met
+numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    if number == 3:
+        break
+    print(number)
+# output
+# 1
+# 2
+
+
+# continue
+
+# Skipping even numbers in a loop using the continue statement
+numbers = [1, 2, 3, 4, 5]
+
+for number in numbers:
+    if number % 2 == 0:
+        continue
+    print(number)
+
+# Output
+# 1
+# 3
+# 5
+
+
+
+</code></pre>
+
+
+
+<h2>8. Lists
+</h2>
+<p>A list is a structured arrangement of items that maintain a specific order and can accommodate elements of diverse types.
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-py">list_name = [item1, item2, item3, ...]
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Creating and accessing a list
+fruits = ["apple", "banana", "orange"]
+print(fruits[0])  # Output: apple
+</code></pre>
+ 
+
+
+<h2>9. Tuples
+</h2>
+<p>A tuple is a sequential gathering of elements, akin to a list, where the order of items is preserved.     However, tuples are immutable, meaning their elements cannot be modified after creation. Tuples are enclosed in parentheses () and elements are separated by commas.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">tuple_name = (element1, element2, element3, ...)
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Creating and accessing a tuple
+numbers = (1, 2, 3, 4, 5)
+print(numbers[2])  # Output: 3
+
+</code></pre>
+
+
+<h2>10. Dictionaries
+</h2>
+<p>A dictionary is a collection of key-value pairs, where the elements are not arranged in a specific order. It provides a way to store and retrieve data using unique keys. Dictionaries are denoted by curly braces {} and each key-value pair is separated by a colon (:).
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+dictionary_name = {"key1": value1, "key2": value2, "key3": value3, ...}
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Creating and accessing a dictionary
+student = {"name": "John", "age": 20, "grade": "A"}
+print(student["name"])  # Output: John
+
+</code></pre>
+
+
+<h2>11. Sets
+</h2>
+<p>A set is a collection of elements that is not organized in a particular order. It does not allow duplicate values. Sets are enclosed in curly braces {} or can be created using the set() function.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+set_name = {element1, element2, element3, ...}
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Creating and accessing a set
+numbers = {1, 2, 3, 4, 5}
+print(3 in numbers)  # Output: True
+</code></pre>
+
+
+<h2>12. Functions</h2>
+<p>A function definition is the process of creating a new function. It specifies the name of the function, the parameters it takes (if any), and the code block or statements that make up the function's body.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+def function_name(parameter1, parameter2, ...):
+     # Code block
+
+function_name(argument1, argument2, ...) # function call
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Function definition
+def greet(name):
+     # Function body
+     print("Hello, " + name + "!")
+
+def multiply(a, b):
+     # Function body
+     result = a * b
+     return result
+
+# Function calls
+greet("Alice")  # Output: Hello, Alice!
+
+product = multiply(5, 3)
+print("Product:", product)  # Output: Product: 15
+
+</code></pre>
+
+<h2>13. Importing Modules
+</h2>
+<p> Importing modules allows you to access functions, classes, and variables defined in external Python files. It enables code reuse and simplifies program development.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">import module_name
+# or
+
+from module_name import function_name, class_name, variable_name
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+import math
+from datetime import datetime
+</code></pre>
+
+
+<h2>14. Creating Modules
+</h2>
+<p>Modules are Python files containing code that can be imported into other programs. By creating modules, you can organize your code into logical units and reuse it across different projects.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+# Create a new Python file with a .py extension.
+# Define functions, classes, and variables within the file.
+# Save the file  
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# file 'my-module.py'
+def greet(name):
+     print("Hello, " + name + "!")
+ 
+
+# file 'main-file.py'
+import my_module
+
+my_module.greet("Alice") # Hello, Alice!
+     
+</code></pre>
+
+
+<h2>15. Using Packages
+</h2>
+<p>Packages are directories that contain multiple modules, forming a hierarchical structure. They help organize related modules and avoid naming conflicts.</p>
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# directory structure
+
+my_package/
+├── __init__.py
+├── module1.py
+└── module2.py
+
+# In another Python file, import specific modules from the package
+
+from my_package import module1, module2
+
+</code></pre>
+
+
+<h2>16. Opening and Closing Files
+</h2>
+<p>Open the desired file first. Opening a file establishes a connection between the file on the disk and your Python program. After you're done with the file, it's important to close it to free up system resources.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+file = open(file_path, mode)
+file.close()
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+file = open("file.txt", "r")
+# File operations...
+file.close()
+
+</code></pre>
+
+<h2>17. Reading and Writing Files
+</h2>
+<p>Reading files allows you to access the contents of a file, while writing files enables you to modify or create new files.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+content = file.read()
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+file = open("file.txt", "r")
+content = file.read()
+print(content)
+file.close()
+   
+# writing files
+# Syntax: file.write(content)
+# Example:
+#file = open("file.txt", "w")
+#file.write("Hello, world!")
+#file.close()
+
+</code></pre>
+
+<h2>18. Exception Handling
+</h2>
+<p>Exception handling allows you to handle and manage errors that may occur during file operations. It helps prevent program crashes and provides a way to gracefully handle exceptional situations.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+try:
+     # may raise an exception
+except ExceptionType:
+     # Code to handle the exception
+finally:
+     # Code that will always execute
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+try:
+     file = open("file.txt", "r")
+     # File operations...
+except FileNotFoundError:
+     print("File not found.")
+finally:
+     file.close()
+ 
+</code></pre>
+
+<h2>19. Classes and Objects
+</h2>
+<p> A class is referred as a template for creating objects. Objects are instances of a class that encapsulate data (attributes) and behavior (methods) into a single entity.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+class ClassName:
+     # Class attributes and methods
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+class Car:
+     def __init__(self, brand, model):
+          self.brand = brand
+          self.model = model
+
+     def drive(self):
+          print("Driving the", self.brand, self.model)
+
+my_car = Car("Tesla", "Model S")
+my_car.drive() # Driving the Tesla Model S
+
+my_car_two = Car("Tesla", "Roadster")
+my_car_two.drive() # Driving the Tesla Roadster
+</code></pre>
+
+<h2>20. Inheritance
+</h2>
+<p>Inheritance is a mechanism in which one class acquires the attributes and methods of another class. It allows for code reuse and the creation of a hierarchy of classes.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+class ChildClassName(ParentClassName):
+     # Child class attributes and methods
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+class Car:
+     def __init__(self, brand, model):
+          self.brand = brand
+          self.model = model
+
+     def drive(self):
+          print("Driving the", self.brand, self.model)
+
+class ElectricCar(Car):
+     def charge(self):
+          print("Charging the", self.brand, self.model)
+
+my_electric_car = ElectricCar("Nissan", "Leaf")
+my_electric_car.drive() # Driving the Nissan Leaf
+my_electric_car.charge() # Charging the Nissan Leaf
+
+ 
+</code></pre>
+
+<h2>21. Polymorphism
+</h2>
+<p>Polymorphism refers to the ability to treat objects from different classes as if they belong to a shared base class. It allows for flexibility and interchangeability of objects by providing a uniform interface.</p>
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+def perform_drive(car):
+     car.drive()
+
+my_car = Car("BMW", "M3")
+my_electric_car = ElectricCar("Tesla", "Model 3")
+
+perform_drive(my_car)
+perform_drive(my_electric_car)
+ 
+</code></pre>
+<p>In the example above, we define a function perform_drive() that takes a Car object as an argument and invokes its drive() method. We can pass both Car and ElectricCar objects to the function, demonstrating polymorphism</p>
+
+<h2>22. Encapsulation</h2>
+<p> Encapsulation is the bundling of data and methods within a class, hiding internal details and providing controlled access to the class's functionality. It helps in data protection and abstraction.</p>
+
+ 
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+class BankAccount:
+     def __init__(self, account_number, balance):
+          self._account_number = account_number  # Protected attribute
+          self._balance = balance  # Protected attribute
+
+     def deposit(self, amount):
+          self._balance += amount
+
+     def withdraw(self, amount):
+          if amount &lt;= self._balance:
+               self._balance -= amount
+          else:
+               print("Insufficient balance.")
+
+     def get_balance(self):
+          return self._balance
+ 
+my_account = BankAccount("123456789", 1000)
+my_account.deposit(500)
+my_account.withdraw(2000)
+print("Account Balance:", my_account.get_balance())
+ 
+# Output
+# Insufficient balance.
+# Account Balance: 1500
+</code></pre>
+
+
+
+<h2>23. String Methods</h2>
+<p>String methods are built-in functions that operate on strings, allowing you to manipulate and transform string data easily.</p>
+<pre><code class="language-py">
+# upper(): Converts a string to uppercase.
+# lower(): Converts a string to lowercase.
+# strip(): Removes leading and trailing whitespace from a string.
+# split(): Splits a string into a list of substrings based on a delimiter.
+# join(): Joins a list of strings into a single string with a specified delimiter.
+# replace(): Replaces occurrences of a substring with another substring.
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+my_string = "Hello, World!"
+print(my_string.upper()) # HELLO, WORLD!
+print(my_string.lower()) # hello, world!
+print(my_string.strip()) # Hello, World!
+print(my_string.split(",")) #  ['Hello', ' World!']
+print("-".join(["Hello", "World"])) # Hello-World
+print(my_string.replace("Hello", "Hi")) # Hi, World!
+     
+</code></pre>
+ 
+
+
+
+<h2>24. Decorators
+</h2>
+<p> Decorators are a powerful feature in Python that allow you to modify the behavior of functions or classes without changing their source code. They provide a way to add additional functionality to existing functions or classes.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+@decorator
+def function():
+     # Function body
+     
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+def uppercase_decorator(func):
+     def wrapper():
+          result = func()
+          return result.upper()
+     return wrapper
+
+@uppercase_decorator
+def greeting():
+     return "hello, world!"
+
+print(greeting()) # HELLO, WORLD!
+ 
+</code></pre>
+
+
+
+<h2>25. Generators
+</h2>
+<p>Generators are functions that can be used to create iterators, which generate a sequence of values on-the-fly. They allow for memory-efficient and lazy evaluation of values.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+def generator_function():
+     # Generate values using the yield keyword
+     yield value
+ 
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+def countdown(n):
+     while n > 0:
+          yield n
+          n -= 1
+
+for number in countdown(5):
+     print(number)
+'''
+Output: 
+5
+4
+3
+2
+1
+'''
+</code></pre>
+
+
+<h2>26. Context Managers
+</h2>
+<p>Context managers allow you to manage resources, such as files or network connections, by defining setup and teardown actions. They ensure that resources are properly acquired and released, even in the presence of exceptions or errors.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+with context_manager as variable:
+     # Code block that uses the resource
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+with open("file.txt", "r") as file:
+     content = file.read()
+     print(content)
+</code></pre>
+
+
+<h2>27. Try-Except Blocks
+</h2>
+<p>Try-except blocks are used to catch and handle exceptions in Python programs. They allow you to anticipate and respond to potential errors, preventing program crashes and providing alternative actions.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+try:
+     # Code that may raise an exception
+except ExceptionType:
+     # Code to handle the exception
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+try:
+     result = x / y
+except ZeroDivisionError:
+     print("Error: Division by zero")
+
+</code></pre>
+
+<h2>28. Handling Multiple Exceptions
+</h2>
+<p>In Python, you can handle multiple exceptions by specifying multiple except blocks. This allows you to handle different types of exceptions with specific error-handling code.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+try:
+     #   may raise exceptions
+except ExceptionType1:
+     # Code to handle ExceptionType1
+except ExceptionType2:
+     # Code to handle ExceptionType2
+
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+try:
+     #   may raise exceptions
+except ValueError:
+     # Handle ValueError
+except TypeError:
+     # Handle TypeError
+     
+</code></pre>
+
+<h2>29. Raising Exceptions
+</h2>
+<p>Python allows you to raise exceptions explicitly in your code. Raising an exception is useful when you encounter a condition that warrants an error or exceptional situation.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-py">
+raise ExceptionType("Error message")
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+def divide(x, y):
+     if y == 0:
+          raise ZeroDivisionError("Cannot divide by zero")
+     return x / y
+</code></pre>
+
+<h2>30. Useful Built-in Functions</h2>
+ <p>These functions are readily available and can be used without the need for additional imports. </p>
+
+<pre><code class="language-py">
+len()      - returns the length or number of elements in an object, such as a string, list, or tuple. 
+range()    - The range() function generates a sequence of numbers within a specified range.
+type()     - The type() function returns the type of an object, providing information about the class or data type of the object.
+print()    - The print() function is used to display or output text or variables to the console.
+input()    - The input() function allows user input from the console, enabling interaction with the user during program execution.
+</code></pre>
+
+<h3>Example: </h3>
+<pre><code class="language-py">
+# Using built-in functions in Python
+
+# len()
+my_string = "Hello, World!"
+length = len(my_string)
+print("Length:", length)
+
+# range()
+for num in range(1, 6):
+     print("Number:", num)
+
+# type()
+my_list = [1, 2, 3]
+data_type = type(my_list)
+print("Data type:", data_type)
+
+# print()
+name = "Ram"
+age = 25
+print("My name is", name, "and I am", age, "years old.")
+
+# input()
+name = input("Enter your name: ")
+print("Hello,", name)
+  
+# Output
+Length: 13
+Number: 1
+Number: 2
+Number: 3
+Number: 4
+Number: 5
+Data type: &lt;class 'list'&gt;
+My name is Ram and I am 25 years old.
+Enter your name: Radha
+Hello, Radha
+</code></pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          </section>
+     </main>
+     <footer>
+          <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+          <p>Copyright &#169;	 2023 langthiru. All rights reserved</p>
+          <a href="../about/privacy-policy.html">Privacy Policy</a>
+          <a href="../about/terms-of-use.html">Terms of Use</a>
+     </footer>
+     <script src="../source/prism.js"></script>
+</body>
+</html>

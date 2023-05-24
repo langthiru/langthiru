@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZKS6L1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-DXNDZKS6L1');
+</script>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../source/style.css">
+     <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../source/prism.css">
+    <link rel="canonical" href="https://www.thirulang.online/cheatsheets/javascript-latest-cheatsheet">
+     <meta name="description" content="Latest JavaScript Cheatsheet. JavaScript Basics, JavaScript ES6, JSON, Promises, Async, and, more.">
+     <title>JavaScript Cheatsheet 2023</title>
+</head>
+<body>
+     <header>
+          <nav>
+               <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+               <ul>
+                    <li><a href="../cheatsheets/python-latest-cheatsheet.html">Python</a></li>
+                    <li><a href="../cheatsheets/java-cheatsheet-latest.html">Java</a></li>
+               </ul>
+          </nav>
+       
+     </header>
+ 
+     <main>
+          
+<section class="content">
+<h1>JavaScript Cheatsheet 2023</h1>
+<p>JavaScript has established itself as a crucial language in the world of web development, enabling dynamic and interactive user experiences on websites and applications. As technology continues to evolve at a rapid pace, staying up to date with the latest features, best practices, and syntax updates becomes more important than ever for developers.</p> 
+
+<h2>Table of Contents: </h2>
+<ol>
+    <li>Comments</li>
+    <li>Variables</li>
+    <li>Let and Const</li>
+    <li>Data Types</li>
+    <li>Operators</li>
+    <li>if</li>
+    <li>else if</li>
+    <li>else</li>
+    <li>for</li>
+    <li>while</li>
+    <li>do-while</li>
+    
+
+    <li>Switch Statement</li>
+    <li>Break and Continue </li>
+    <li>Functions</li>
+    <li>Arrow Functions</li>
+    <li>Arrays</li>
+    <li>Array Methods</li>
+    <li>for of</li>
+    <li>Objects</li>
+    <li>for in</li>
+    <li>Creating JSON Objects</li>
+    <li>Parsing JSON</li>
+    <li>Stringifying JSON</li>
+
+    <li>Accessing HTML Elements</li>
+    <li>Modifying Element Content</li>
+    <li>Changing Element Styles</li>
+    <li>setTimeout() and setInterval()</li>
+    <li>Callback Functions</li>
+    <li>Promises</li>
+    <li>Async/Await</li>
+    <li>try-catch Blocks</li>
+    <li>Throwing Errors</li>
+    <li>Handling Exceptions</li>
+    <li>Creating Modules</li>
+    <li>Exporting and Importing Modules</li>
+    <li>Template Literals</li>
+    <li>Creating Regular Expressions
+    </li>
+     <li>Fetch API
+     </li>
+     <li>Geolocation API
+     </li>
+     <li>Web Storage API
+     </li>
+     <li>Local Storage
+     </li>
+
+</ol>
+
+<h2>1.  Comments
+</h2>
+<p>Comments in JavaScript are used to add explanatory text within the code. They are ignored by the JavaScript interpreter and do not affect the execution of the program. Comments can be used to improve code readability, explain functionality, or temporarily disable code.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+//  a single-line comment
+
+/*
+     a multi-line comment.
+     can span multiple lines.
+*/
+     
+</code></pre>
+ 
+
+
+<h2>2. Variables</h2>
+<p>Variables are used to store and access the data in JavaScript. They provide a way to give a name (identifier) to a value, which can be a number, string, boolean, object, or any other data type.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+var variableName = value;  // Declaring a variable (old way, not recommended)
+
+let variableName = value;  // Declaring a variable (block-scoped)
+
+const variableName = value;  // Declaring a constant (block-scoped)
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let name = "John";
+let age = 25;
+let isStudent = true;
+
+console.log(name);       // Output: John
+console.log(age);        // Output: 25
+console.log(isStudent);  // Output: true
+
+name = "Alice";
+age = 30;
+isStudent = false;
+
+console.log(name);       // Output: Alice
+console.log(age);        // Output: 30
+console.log(isStudent);  // Output: false
+
+name = 30  // dynamic : re-assining a different value to other data type variable
+console.log(name) // 30
+</code></pre>
+
+</code></pre>
+
+<h2>3. Let and Const
+</h2>
+<p>let and const are keywords introduced in ES6 (ECMAScript 2015) for declaring variables. They have block scope, meaning they are only accessible within the block (enclosed within curly braces) where they are defined.
+</p>
+<p>let allows reassigning a new value to the variable, whereas const creates a read-only constant that cannot be reassigned once initialized.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let a = 5;
+a = 10;
+console.log(a);  // Output: 10
+
+const b = 15;
+console.log(b) // 15
+b = 20;       
+console.log(b);  // ERROR!
+
+</code></pre>
+
+
+
+<h2>4. Data Types
+</h2>
+
+<p>JavaScript has several built-in data types</p>
+<h3>Example: </h3>
+<pre><code class="language-js">
+Number: numeric values, such as integers and floating-point numbers.
+String: series of characters like text, sentences, etc.
+Boolean: a logical value, true or false.
+Object: a collection of key-value pairs or properties.
+Array: an ordered list of values.
+Null: the absence of any object value.
+Undefined: an uninitialized or undefined value.
+</code></pre>
+ 
+
+
+
+<h2>5. Operators
+</h2>
+<p>Operators in JavaScript are used to perform operations on variables and values.</p>
+
+ 
+<pre><code class="language-js">
+1. Arithmetic Operators:
+Addition (+)
+Subtraction (-)
+Multiplication (*)
+Division (/)
+Modulus (%)
+Increment (++)
+Decrement (--)
+
+2. Assignment Operators:
+Assignment (=)
+Addition assignment (+=)
+Subtraction assignment (-=)
+Multiplication assignment (*=)
+Division assignment (/=)
+Modulus assignment (%=)
+
+3. Comparison Operators:
+Equal to (==)
+Not equal to (!=)
+Strict equal to (===)
+Strict not equal to (!==)
+Greater than (>)
+Less than (&lt;)
+Greater than or equal to (>=)
+Less than or equal to (&lt;=)
+
+4. Logical Operators:
+Logical AND (&&)
+Logical OR (||)
+Logical NOT (!)
+
+5. Bitwise Operators:
+Bitwise AND (&)
+Bitwise OR (|)
+Bitwise XOR (^)
+Bitwise NOT (~)
+Left shift (&lt;&lt;)
+Right shift (>>)
+Unsigned right shift (>>>)
+
+6. Ternary Operator:
+Ternary operator (condition ? expression1 : expression2)
+
+7. String Operator:
+Concatenation (+)
+
+8. Type Operators:
+typeof
+instanceof
+
+9. Other Operators:
+Comma operator (,)
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+// Arithmetic Operators
+let x = 5 + 3;
+console.log(x);  // Output: 8
+
+let y = 10 - 4;
+console.log(y);  // Output: 6
+
+let z = 6 * 2;
+console.log(z);  // Output: 12
+
+let a = 10 / 2;
+console.log(a);  // Output: 5
+
+let b = 10 % 3;
+console.log(b);  // Output: 1
+
+let c = 7;
+console.log(++c);  // Output: 8
+
+let d = 5;
+console.log(d--);  // Output: 5
+console.log(d);    // Output: 4
+
+// Assignment Operators
+let e = 10;
+e += 5;
+console.log(e);  // Output: 15
+
+let f = 10;
+f -= 3;
+console.log(f);  // Output: 7
+
+let g = 5;
+g *= 3;
+console.log(g);  // Output: 15
+
+let h = 10;
+h /= 2;
+console.log(h);  // Output: 5
+
+let i = 10;
+i %= 3;
+console.log(i);  // Output: 1
+
+// Comparison Operators
+let j = 5;
+let k = 10;
+console.log(j == k);  // Output: false
+
+let l = 5;
+let m = 10;
+console.log(l != m);  // Output: true
+
+let n = 5;
+let o = "5";
+console.log(n === o);  // Output: false (strict equality)
+
+let p = 5;
+let q = "5";
+console.log(p !== q);  // Output: true (strict inequality)
+
+let r = 5;
+let s = 10;
+console.log(r > s);   // Output: false
+
+let t = 5;
+let u = 10;
+console.log(t &lt; u);   // Output: true
+
+// Logical Operators
+let v = true;
+let w = false;
+console.log(v && w);  // Output: false (logical AND)
+
+let x = true;
+let y = false;
+console.log(x || y);  // Output: true (logical OR)
+
+let z = true;
+console.log(!z);      // Output: false (logical NOT)
+
+// Ternary Operator
+let age = 20;
+let canVote = (age >= 18) ? "Yes" : "No";
+console.log(canVote);  // Output: Yes
+
+// String Operator
+let firstName = "John";
+let lastName = "Doe";
+let fullName = firstName + " " + lastName;
+console.log(fullName);  // Output: John Doe
+
+// typeof Operator
+let num = 10;
+console.log(typeof num);  // Output: number
+
+let str = "Hello";
+console.log(typeof str);  // Output: string
+
+let bool = true;
+console.log(typeof bool);  // Output: boolean
+
+// Other Operators
+let result = (1, 2, 3, 4);
+console.log(result);  // Output: 4
+</code></pre>
+
+
+
+<h2>6. if
+</h2>
+<p>The <strong>if</strong> statement is used to execute a block of code only if a specified condition is true.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition) {
+     // Code block if the condition is true
+}
+     
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let age = 20;
+
+if (age >= 18) {
+     console.log("You are an adult.");
+}
+     
+</code></pre>
+
+
+
+<h2>7. else if
+</h2>
+<p>The <strong>else if</strong> statement allows you to check additional conditions if the preceding <strong>if</strong> statement is false.</p>
+
+ 
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition1) {
+     // Code block  if condition1 is true
+} else if (condition2) {
+     // Code block if condition2 is true
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let time = 14;
+
+if (time &lt; 12) {
+     console.log("Good morning!");
+} else if (time  &lt; 18) {
+     console.log("Good afternoon!");
+}
+     
+</code></pre>
+
+
+
+<h2>8. else
+</h2>
+<p>The <strong>else</strong> statement is used to define a block of code to be executed if none of the preceding conditions are true.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition) {
+     // Code block if the condition is true
+} else {
+     // Code block if the condition is false
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let day = "Monday";
+
+if (day === "Saturday" || day === "Sunday") {
+     console.log("It's the weekend!");
+} else {
+     console.log("It's a weekday.");
+}
+
+</code></pre>
+
+
+
+<h2>9. for
+</h2>
+<p>The <strong>for</strong> loop is used to execute a block of code repeatedly for a specified number of times.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+for (initialization; condition; iteration) {
+     // Code to be executed in each iteration
+}
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+for (let i = 0; i &lt; 5; i++) {
+     console.log(i);
+}
+// Output: 0, 1, 2, 3, 4
+
+</code></pre>
+
+ 
+
+
+<h2>10. while
+</h2>
+<p>The <strong>while</strong> loop is used to execute a block of code repeatedly as long as a specified condition is true.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+while (condition) {
+     // Code to be executed as long as the condition is true
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let i = 0;
+while (i &lt; 5) {
+     console.log(i);
+     i++;
+}
+// Output: 0, 1, 2, 3, 4
+
+</code></pre>
+
+
+<h2>11. do-while
+</h2>
+<p>The code block is executed at least once, regardless of whether the condition is initially false.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+do {
+     // Code to be executed
+} while (condition);
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let i = 3;
+do {
+     console.log(i);
+     i--;
+} while (i > 5);
+console.log("After loop");
+
+// 3
+// After loop
+</code></pre>
+
+
+<h2>12. Switch Statement
+</h2>
+<p>The switch statement is used to perform different actions based on different conditions.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+switch (expression) {
+case value1:
+     // Code block
+     break;
+case value2:
+     // Code block
+     break;
+default:
+     // default code block
+}
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let day = "Monday";
+switch (day) {
+     case "Monday":
+     console.log("It's Monday!");
+     break;
+     case "Tuesday":
+     console.log("It's Tuesday!");
+     break;
+     default:
+     console.log("It's another day.");
+}
+// Output: It's Monday!
+
+</code></pre>
+
+
+<h2>13. Break and Continue
+</h2>
+<p>The break statement is used to exit a loop or switch statement, while the continue statement is used to skip the current iteration of a loop and continue to the next iteration.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+// break 
+for (let i = 0; i &lt; 5; i++) {
+if (i === 3) {
+     break;
+}
+console.log(i);
+}
+// Output: 0, 1, 2
+
+
+
+// continue
+for (let i = 0; i &lt; 5; i++) {
+if (i === 2) {
+     continue;
+}
+console.log(i);
+}
+// Output: 0, 1, 3, 4
+
+</code></pre>
+
+
+<h2>14. Functions
+</h2>
+<p>Functions are blocks of code that can be reused to perform a specific task.
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+function functionName(parameter1, parameter2) {
+     // Code to be executed
+     return result; // Optional
+}
+  
+functionName(argument1, argument2); // function call
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+function hi(name) {
+     console.log("Hi, " + name + "!");
+}
+
+hi("Radha");
+hi("Krihna")
+
+// Hi, Radha!
+// Hi, Krihna!
+        
+</code></pre>
+
+
+<h2>15. Arrow Functions
+</h2>
+<p>Arrow functions are a concise syntax for writing functions in JavaScript.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+const functionName = (parameter1, parameter2) => {
+     // Code to be executed
+     return result; // Optional
+}
+
+functionName(argument1, argument2); // function call
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+const hi = (name) => { 
+     console.log("Hi, " + name + "!"); 
+} 
+
+hi("Radha");
+hi("Krihna")
+
+// Hi, Radha!
+// Hi, Krihna!
+</code></pre>
+
+
+<h2>16. Arrays
+</h2>
+<p>Arrays are utilized to store multiple values within a single variable.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">let arrayName = [value1, value2, value3];
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let fruits = ["apple", "banana", "orange"];
+console.log(fruits);  // Output: ["apple", "banana", "orange"]
+</code></pre>
+
+<h2>17. Array Methods
+</h2>
+<p>Array methods are built-in functions that can be used to manipulate arrays.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let numbers = [1, 2, 3, 4, 5];
+
+// Push: add an element to the end of the array
+numbers.push(6);
+console.log(numbers);  // Output: [1, 2, 3, 4, 5, 6]
+
+// Pop: delete the last element from the array
+numbers.pop();
+console.log(numbers);  // Output: [1, 2, 3, 4, 5]
+
+// Length: get the length of the array
+console.log(numbers.length);  // Output: 5
+
+// Concat: merge two arrays
+let moreNumbers = [6, 7, 8];
+let mergedArray = numbers.concat(moreNumbers);
+console.log(mergedArray);  // Output: [1, 2, 3, 4, 5, 6, 7, 8]
+
+// Join: convert the array into a string
+let arrayAsString = numbers.join(", ");
+console.log(arrayAsString);  // Output: "1, 2, 3, 4, 5"
+
+</code></pre>
+
+
+<h2>18. for of
+</h2>
+<p>The for...of loop is used to iterate over elements of an iterable object, such as an array.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+for (let element of iterable) {
+     // Code to be executed for each element
+}
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let fruits = ["apple", "banana", "orange"];
+for (let fruit of fruits) {
+     console.log(fruit);
+}
+// Output: "apple", "banana", "orange"
+
+</code></pre>
+
+
+<h2>19. Objects
+</h2>
+<p>Objects are used to store key-value pairs and represent complex data structures.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+let objectName = {
+     key1: value1,
+     key2: value2,
+     key3: value3
+};
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let person = {
+     name: "John",
+     age: 30,
+     city: "New York"
+};
+console.log(person);  // Output: { name: "John", age: 30, city: "New York" }
+
+</code></pre>
+
+<h2>20. for in
+</h2>
+<p>The for...in loop is used to iterate across the properties of an object.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+for (let property in object) {
+     // Code to be executed for each property
+}      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+let person = {
+     name: "Radha",
+     age: 30,
+     city: "Vizag"
+};
+
+for (let key in person) {
+console.log(key + ": " + person[key]);
+}
+// Output: "name: Radha", "age: 30", "city: Vizag"
+
+</code></pre>
+
+ 
+
+
+<h2>21. Creating JSON Objects
+</h2>
+<p>JSON (JavaScript Object Notation) is a lightweight data interchange format that is designed to be easily readable and writable for humans, as well as easily parsed and generated by machines.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let person = {
+"name": "John Doe",
+"age": 30,
+"city": "New York"
+};    
+</code></pre>
+
+<h2>22. Parsing JSON
+</h2>
+<p>Parsing JSON refers to converting a JSON string into a JavaScript object.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let jsonString = '{"name":"John Doe","age":30,"city":"New York"}';
+let person = JSON.parse(jsonString);
+console.log(person.name);  // Output: "John Doe"
+
+</code></pre>
+
+<h2>23. Stringifying JSON
+</h2>
+<p>Stringifying JSON refers to converting a JavaScript object into a JSON string.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let person = {
+     "name": "John Doe",
+     "age": 30,
+     "city": "New York"
+};
+let jsonString = JSON.stringify(person);
+console.log(jsonString);  // Output: '{"name":"John Doe","age":30,"city":"New York"}'
+        
+</code></pre>
+
+
+<h2>24. Accessing HTML Elements
+</h2>
+<p>You can access HTML elements using various methods, such as getElementById, getElementsByClassName, getElementsByTagName, or querySelector.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let element = document.getElementById("myElement");
+</code></pre>
+
+
+
+<h2>25. Modifying Element Content
+</h2>
+<p>You can modify the content of an HTML element by changing its innerHTML property.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let element = document.getElementById("myElement");
+element.innerHTML = "New content";
+</code></pre>
+
+
+
+<h2>26. Changing Element Styles
+</h2>
+<p>You can change the styles of an HTML element by modifying its style property.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let element = document.getElementById("myElement");
+element.style.color = "red";
+element.style.fontSize = "18px";
+</code></pre>
+
+
+<h2>27. setTimeout() and setInterval()
+</h2>
+<p>The setTimeout() function is used to run a function or evaluate an expression after a specific delay, measured in milliseconds.
+</p>
+<p>The setInterval() function is used to execute a function or evaluate an expression repeatedly at a specified interval (in milliseconds).
+</p>
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+setTimeout(function, delay);
+setInterval(function, interval);
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+setTimeout(() => {
+     console.log("Delayed execution");
+     }, 2000);
+     // Output: "Delayed execution" (after 2 seconds)
+     
+        let count = 0;
+let intervalId = setInterval(() => {
+  console.log(count);
+  count++;
+  if (count > 5) {
+    clearInterval(intervalId);
+  }
+}, 1000);
+// Output: 0, 1, 2, 3, 4, 5 (printed every second)
+
+</code></pre>
+
+
+
+<h2>28. Callback Functions
+</h2>
+<p>A callback function is a function that is passed as an argument to another function and is executed after a certain task is completed.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+function greet(name, callback) {
+     console.log("Hello, " + name + "!");
+     callback();
+}
+
+function sayGoodbye() {
+     console.log("Goodbye!");
+}
+
+greet("John", sayGoodbye);
+// Output: "Hello, John!", "Goodbye!"
+
+</code></pre>
+
+
+<h2>29. Promises
+</h2>
+<p>Promises are used for asynchronous operations in JavaScript. They represent the eventual completion (or failure) of an asynchronous operation and allow handling the results.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+function getData() {
+     return new Promise((resolve, reject) => {
+          setTimeout(() => {
+          const data = "Data received";
+          if (data) {
+               resolve(data);
+          } else {
+               reject("Error occurred");
+          }
+          }, 2000);
+     });
+     }
+     
+getData()
+.then((data) => {
+     console.log(data);
+})
+.catch((error) => {
+     console.log(error);
+});
+// Output: "Data received" (after 2 seconds)
+
+</code></pre>
+
+
+<h2>30. Async/Await
+</h2>
+<p>Async/await is a syntax feature that simplifies working with Promises by providing a more intuitive and concise way to handle asynchronous operations.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+function getData() {
+return new Promise((resolve, reject) => {
+     setTimeout(() => {
+     const data = "Data received";
+     if (data) {
+          resolve(data);
+     } else {
+          reject("Error occurred");
+     }
+     }, 2000);
+});
+}
+
+async function fetchData() {
+try {
+     const data = await getData();
+     console.log(data);
+} catch (error) {
+     console.log(error);
+}
+}
+
+fetchData();
+// Output: "Data received" (after 2 seconds)
+
+</code></pre>
+
+
+<h2>31. try-catch Blocks
+</h2>
+<p>The try-catch block is used for error handling in JavaScript. It allows catching and handling exceptions that may occur within a block of code.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+try {
+     //  may throw an exception
+} catch (error) {
+     //   handle the exception
+}      
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+try {
+const result = 10 / 0;
+console.log(result);
+} catch (error) {
+console.log("An error occurred: " + error);
+}
+// Output: "An error occurred: Infinity"
+
+</code></pre>
+
+
+<h2>32. Throwing Errors
+</h2>
+<p>You can manually throw an error using the throw statement. It allows you to specify custom error messages or trigger specific types of errors.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+function divide(a, b) {
+if (b === 0) {
+     throw new Error("Can't divide with 0");
+}
+return a / b;
+}
+
+try {
+const result = divide(10, 0);
+console.log(result);
+} catch (error) {
+console.log("An error occurred: " + error.message);
+}
+// Output: "An error occurred: Can't divide with 0"
+
+</code></pre>
+
+
+<h2>33. Handling Exceptions
+</h2>
+<p>Exception handling refers to the process of catching and handling errors to prevent the program from crashing. It allows you to gracefully handle errors and provide fallback behavior.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+function fetchData() {
+try {
+     // Code that may throw an exception
+     const data = fetch("https://api.example.com/data");
+     return data;
+} catch (error) {
+     // Code to handle the exception
+     console.log("An error occurred: " + error);
+     return null;
+}
+}
+
+const result = fetchData();
+if (result) {
+// Code to handle the successful result
+} else {
+// Code to handle the exception case
+}
+
+</code></pre>
+
+
+<h2>34. Creating Modules
+</h2>
+<p>Modules are used to organize and encapsulate code into separate files, making it easier to manage and reuse code.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+// module.js
+export function greet(name) {
+     console.log(`Hello, ${name}!`);
+}
+
+export function sayGoodbye() {
+     console.log("Goodbye!");
+}
+
+</code></pre>
+
+
+<h2>35. Importing Modules
+</h2>
+<p>Exporting modules allows specific functions, variables, or objects to be accessible outside the module. Importing modules allows using those exported entities in other modules.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+import { greet, sayGoodbye } from './module.js';
+
+greet("John");
+// Output: "Hello, John!"
+
+sayGoodbye();
+// Output: "Goodbye!"
+     
+</code></pre>
+
+
+<h2>36. Template Literals
+</h2>
+<p>Template literals are a way to concatenate strings and include variables or expressions using backticks (`).
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+let name = "John";
+let message = `Hello, ${name}!`;
+console.log(message);
+// Output: "Hello, John!"
+</code></pre>
+
+
+<h2>37. Creating Regular Expressions
+</h2>
+<p>Regular expressions (regex) are patterns used to match and manipulate text.
+</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+let regex = /pattern/;
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+// Regular expression to match email addresses
+let emailRegex = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
+
+let email = "sarah@example.com";
+
+if (emailRegex.test(email)) {
+     console.log("Valid email address");
+} else {
+     console.log("Invalid email address");
+}
+// Output: "Valid email address"
+     
+</code></pre>
+
+
+<h2>38. Fetch API
+</h2>
+<p>The Fetch API provides an interface for making HTTP requests and handling responses asynchronously.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+fetch('https://api.example.com/data')
+.then(response => response.json())
+.then(data => console.log(data))
+.catch(error => console.log(error));
+</code></pre>
+
+
+<h2>39. Geolocation API
+</h2>
+<p>The Geolocation API allows obtaining the geographical location information of the device.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+if (navigator.geolocation) {
+navigator.geolocation.getCurrentPosition(position => {
+     console.log('Latitude:', position.coords.latitude);
+     console.log('Longitude:', position.coords.longitude);
+}, error => {
+     console.log('Error:', error.message);
+});
+} else {
+console.log('Geolocation is not supported by this browser.');
+}
+
+        
+</code></pre>
+
+
+<h2>40. Web Storage API
+</h2>
+<p>The Web Storage API provides a way to store data in the browser's storage, including Local Storage, which persists data even after the browser is closed.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+localStorage.setItem('name', 'John');
+let name = localStorage.getItem('name');
+console.log(name);  // Output: "John"
+
+localStorage.removeItem('name');
+
+</code></pre>
+
+
+<h2>41. Local Storage
+</h2>
+<p>Local Storage is a feature in web browsers that allows JavaScript to store data locally on the user's device. It provides a simple key-value storage mechanism and can be used to persist data even when the browser is closed or the page is refreshed.
+</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+// Storing data in Local Storage
+localStorage.setItem('name', 'John');
+localStorage.setItem('age', '30');
+
+// Retrieving data from Local Storage
+let name = localStorage.getItem('name');
+let age = localStorage.getItem('age');
+
+console.log(name); // Output: "John"
+console.log(age); // Output: "30"
+
+// Updating data in Local Storage
+localStorage.setItem('age', '31');
+age = localStorage.getItem('age');
+console.log(age); // Output: "31"
+
+// Removing data from Local Storage
+localStorage.removeItem('name');
+name = localStorage.getItem('name');
+console.log(name); // Output: null
+
+// Clearing all data from Local Storage
+localStorage.clear();
+
+</code></pre>
+</section>
+     </main>
+     <footer>
+          <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+          <p>Copyright &#169;	 2023 langthiru. All rights reserved</p>
+          <a href="../about/privacy-policy.html">Privacy Policy</a>
+          <a href="../about/terms-of-use.html">Terms of Use</a>
+     </footer>
+     <script src="../source/prism.js"></script>
+</body>
+</html>

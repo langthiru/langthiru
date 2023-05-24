@@ -1,0 +1,1050 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-DXNDZKS6L1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-DXNDZKS6L1');
+</script>
+
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="../source/style.css">
+     <link rel="shortcut icon" href="../source/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../source/prism.css">
+    <link rel="canonical" href="https://www.thirulang.online/cheatsheets/r-language-cheatsheet-latest">
+     <meta name="description" content="Latest R Cheastsheet for Data Scientist that includes basics, vectors, statistics, matrices,Base Graphics,ANOVA, etc.">
+     <title>The Complete R Cheastsheet 2023 </title>
+</head>
+<body>
+     <header>
+          <nav>
+               <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+               <ul>
+                    <li><a href="../cheatsheets/python-latest-cheatsheet.html">Python</a></li>
+                    <li><a href="../cheatsheets/java-cheatsheet-latest.html">Java</a></li>
+               </ul>
+          </nav>
+       
+     </header>
+ 
+     <main>
+          
+<section class="content">
+<h1>R Latest Cheastsheet 2023</h1>
+<p>R has emerged as a powerful and widely-used programming language for statistical analysis, data manipulation, and visualization. It has become an essential tool for data scientists, researchers, and analysts who work with large datasets and need to extract meaningful insights. As the field of data science continues to evolve, staying updated with the latest R functions, packages, and techniques becomes crucial for developers.
+</p>
+
+<h2>Table of Contents: </h2>
+<ol>
+     <li>Comments
+     </li>
+     <li>Variables</li>
+     <li>Data Types</li>
+     <li>Operators</li>
+     <li>Vectors</li>
+     <li>Matrices</li>
+     <li>Arrays</li>
+     <li>Lists</li>
+     <li>Data Frames</li>
+     <li>Subsetting and Indexing</li>
+     <li>Filtering and Sorting</li>
+
+     <li>Adding and Removing Columns</li>
+     <li>Aggregation and Grouping</li>
+     <li>if</li>
+     <li>else</li>
+     <li>elif</li>
+     <li>for</li>
+     <li>while</li>
+     <li>repeat</li>
+     <li>break and next</li>
+     <li>Functions</li>
+     <li>Reading and Writing CSV Files</li>
+
+     <li>Reading and Writing Excel Files</li>
+     <li>Base Graphics</li>
+     <li>ggplot2 Package</li>
+     <li>Plotly Package</li>
+     <li>Interactive Visualizations</li>
+     <li>Descriptive Statistics</li>
+     <li>Hypothesis Testing</li>
+     <li>Regression Analysis</li>
+     <li>ANOVA</li>
+     <li>Installing Packages</li>
+     <li>Loading Packages</li>
+</ol>
+
+<h2>1.  Comments
+</h2>
+<p>Comments are non-executable statements within a program's source code that provide explanations or annotations to make the code more understandable for humans. They are ignored by the compiler or interpreter and do not affect the program's functionality.</p>
+
+
+<h3>Example: </h3>
+<pre><code class="language-js">
+# a single-line comment in R
+# It provides a description for the following code
+
+ 
+/*
+a multi-line comment in R.
+It can span across multiple lines and is useful for more detailed explanations.
+Here, we define a function that calculates the square of a number.
+*/
+</code></pre>
+
+
+<h2>2. Variables</h2>
+<p> Variables in R are containers used to store data values. They have names and can hold different types of data, such as numbers, strings, logical values, and more. Variables allow manipulation and retrieval of data during program execution.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+variable_name = data 
+     (or)
+variable_name &lt;- data
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Declaring and initializing an integer variable in R
+my_variable &lt;- 5
+
+# Updating the value of the variable
+my_variable &lt;- 10
+
+# Declaring and initializing a string variable in R
+message &lt;- "Hello, World!"
+
+# Printing the value of the variable
+print(my_variable)
+print(message)
+  
+# Output: 
+# [1] 10
+# [1] "Hello, World!"
+</code></pre>
+
+<h2>3. Data Types
+</h2>
+<p> Data types in R define the nature of data that variables can store. R supports various data types, including numeric, character, logical, and more. Data types determine the range of values that variables can hold and the operations that can be performed on them.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Numeric data type
+numeric_var &lt;- 3.14
+age &lt;- 25
+
+# Character data type
+name &lt;- "John Doe"
+message &lt;- "Hello, World!"
+
+# Logical data type
+is_true &lt;- TRUE
+is_false &lt;- FALSE
+
+# Integer data type
+num &lt;- 42L
+count &lt;- as.integer(10)
+
+# Factor data type
+gender &lt;- factor("male", levels = c("male", "female"))
+
+# Date data type
+current_date &lt;- as.Date("2023-05-24")
+
+# Data Frame data type
+data &lt;- data.frame(id = c(1, 2, 3), name = c("John", "Jane", "Alice"))
+
+# List data type
+my_list &lt;- list(1, "Hello", TRUE)
+
+# NULL data type
+no_value &lt;- NULL
+
+print(numeric_var)
+# Output: 3.14
+
+print(age)
+# Output: 25
+
+print(name)
+# Output: John Doe
+
+print(message)
+# Output: Hello, World!
+
+print(is_true)
+# Output: TRUE
+
+print(is_false)
+# Output: FALSE
+
+print(num)
+# Output: 42
+
+print(count)
+# Output: 10
+
+print(gender)
+# Output: male
+# Levels: male female
+
+print(current_date)
+# Output: 2023-05-24
+
+print(data)
+# Output:
+#   id name
+# 1  1 John
+# 2  2 Jane
+# 3  3 Alice
+
+print(my_list)
+# Output: 
+# [[1]]
+# [1] 1
+#
+# [[2]]
+# [1] "Hello"
+#
+# [[3]]
+# [1] TRUE
+
+print(no_value)
+# Output: NULL
+
+     
+</code></pre>
+
+
+<h2>4. Operators
+</h2>
+<p>Operators in programming languages are symbols or keywords that perform specific operations on operands (variables, values, or expressions). They enable manipulating data, performing calculations, comparing values, and controlling program flow.</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Arithmetic Operators
+x &lt;- 10 + 5     # Addition
+y &lt;- 10 - 5     # Subtraction
+z &lt;- 10 * 5     # Multiplication
+w &lt;- 10 / 5     # Division
+m &lt;- 10 %% 5    # Modulus
+e &lt;- 10 ^ 5     # Exponentiation
+
+# Comparison Operators
+a &lt;- 10 == 5    # Equal to
+b &lt;- 10 != 5    # Not equal to
+c &lt;- 10 > 5     # Greater than
+d &lt;- 10 &lt; 5     # Less than
+g &lt;- 10 >= 5    # Greater than or equal to
+l &lt;- 10 &gt;= 5    # Less than or equal to
+
+# Logical Operators
+t &lt;- TRUE & FALSE  # Logical AND
+r &lt;- TRUE | FALSE  # Logical OR
+n &lt;- !TRUE         # Logical NOT
+
+# Assignment Operators
+v &lt;- 10       # Assigning a value
+x &lt;- 5
+v &lt;- v + x    # Addition and assignment
+v &lt;- v - x    # Subtraction and assignment
+v &lt;- v * x    # Multiplication and assignment
+v &lt;- v / x    # Division and assignment
+v &lt;- v %% x   # Modulus and assignment
+
+# Conditional Operator
+result &lt;- ifelse(10 > 5, "Greater", "Lesser")  # Ternary conditional operator
+
+# Print statements to display the values
+print(x)
+print(y)
+print(z)
+print(w)
+print(m)
+print(e)
+print(a)
+print(b)
+print(c)
+print(d)
+print(g)
+print(l)
+print(t)
+print(r)
+print(n)
+print(v)
+print(result)
+  
+# Output
+# [1] 5
+# [1] 5
+# [1] 50
+# [1] 2
+# [1] 0
+# [1] 1e+05
+# [1] FALSE
+# [1] TRUE
+# [1] TRUE
+# [1] FALSE
+# [1] TRUE
+# [1] FALSE
+# [1] FALSE
+# [1] TRUE
+# [1] FALSE
+# [1] 0
+# [1] "Greater"
+</code></pre>
+
+
+<h2>5. Vectors
+</h2>
+<p>In R, a vector is a one-dimensional data structure that can hold multiple values of the same data type. It is the most basic and commonly used data structure in R, allowing for efficient storage and manipulation of homogeneous data elements.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Creating a numeric vector using the c() function
+numeric_vector &lt;- c(1, 2, 3, 4, 5)
+
+# Creating a character vector using direct assignment
+character_vector &lt;- c("apple", "banana", "orange")
+
+# Accessing elements of a vector
+print(numeric_vector[3])  # Output: 3
+print(character_vector[2])  # Output: banana
+
+</code></pre>
+
+
+<h2>6. Matrices
+</h2>
+<p> A matrix in R is a two-dimensional data structure consisting of rows and columns. It is useful for handling tabular data and performing matrix operations.</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Creating a matrix
+my_matrix &lt;- matrix(c(1, 2, 3, 4, 5, 6), nrow = 2, ncol = 3)
+# Accessing elements of a matrix
+print(my_matrix[1, 2])  # Output: 2
+
+# Performing matrix transpose
+transposed_matrix &lt;- t(my_matrix)
+print(transposed_matrix)
+
+</code></pre>
+
+
+<h2>7. Arrays</h2>
+<p>An array in R is a multi-dimensional data structure that can hold elements of the same data type. It can have more than two dimensions and is useful for handling complex data sets.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Creating a 3D array
+my_array &lt;- array(c(1, 2, 3, 4, 5, 6), dim = c(2, 3, 2))
+# Accessing elements of an array
+print(my_array[1, 2, 1])  # Output: 2
+
+# Performing operations on arrays
+summed_array &lt;- my_array + 2
+print(summed_array)
+
+</code></pre>
+
+
+<h2>8. Lists
+</h2>
+<p> In R, a list is a versatile data structure that can contain elements of different data types, such as vectors, matrices, data frames, and even other lists. It allows for flexible storage and manipulation of heterogeneous data.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Creating a list
+my_list &lt;- list(element1, element2, element3, ...)
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Creating a list with different data types
+my_list &lt;- list("apple", c(1, 2, 3), my_matrix, TRUE)
+
+# Accessing elements of a list
+print(my_list[[1]])  # Output: apple
+print(my_list[[2]])  # Output: 1 2 3
+
+</code></pre>
+
+
+<h2>9. Data Frames
+</h2>
+<p> A data frame in R is a two-dimensional tabular data structure similar to a table in a relational database. It consists of rows and columns, where each column can have a different data type. Data frames are commonly used for data analysis and manipulation.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Creating a data frame
+my_data_frame &lt;- data.frame(column1, column2, column3, ...)
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Creating a data frame
+my_data_frame &lt;- data.frame(name = c("John", "Emily", "Michael"),
+                              age = c(25, 30, 28),
+                              salary = c(50000, 60000, 55000))
+
+# Accessing elements of a data frame
+print(my_data_frame$name)    # Output: John Emily Michael
+print(my_data_frame[2, 3])   # Output: 60000
+
+</code></pre>
+
+
+<h2>10. Subsetting and Indexing
+</h2>
+<p> Subsetting and indexing in R refer to the process of extracting specific elements or subsets of data from vectors, matrices, lists, or data frames. It allows for selective data manipulation and analysis.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Subsetting and indexing
+subset &lt;- object[index]
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Subsetting a vector
+subset_vector &lt;- numeric_vector[3:5]
+
+# Indexing a matrix
+indexed_matrix &lt;- my_matrix[2, ]
+
+# Subsetting a data frame
+subset_data_frame &lt;- my_data_frame[my_data_frame$age > 25, ]
+
+</code></pre>
+
+<h2>11. Filtering and Sorting
+</h2>
+<p>Filtering involves selecting a subset of data based on specific conditions, while sorting refers to arranging data in a particular order.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Filtering
+subset_data &lt;- data[data$condition, ]
+
+# Sorting
+sorted_data &lt;- order(data$column)
+sorted_data &lt;- data[order(data$column), ]
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Filtering data based on a condition
+filtered_data &lt;- my_data_frame[my_data_frame$age > 25, ]
+
+# Sorting data based on a column
+sorted_data &lt;- my_data_frame[order(my_data_frame$age), ]
+
+</code></pre>
+
+<h2>12. Adding and Removing Columns
+</h2>
+<p>Adding and removing columns involve modifying the structure of a data frame by adding or removing variables.</p>
+ 
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Adding a column
+data$new_column &lt;- values
+
+# Removing a column
+data$new_data &lt;- NULL
+     
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Adding a new column to a data frame
+my_data_frame$new_column &lt;- c(1, 2, 3)
+
+# Removing a column from a data frame
+my_data_frame$column_to_remove &lt;- NULL
+     
+</code></pre>
+
+<h2>13. Aggregation and Grouping
+</h2>
+<p>Aggregation refers to summarizing data based on specific criteria, while grouping involves dividing data into subsets based on categorical variables.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Aggregation
+aggregated_data &lt;- aggregate(values ~ grouping_variable, data = my_data_frame, FUN = function_name)
+
+# Grouping
+grouped_data &lt;- group_by(my_data_frame, grouping_variable)
+summarised_data &lt;- summarise(grouped_data, summary_statistic = function_name(values))
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Aggregating data based on a grouping variable
+aggregated_data &lt;- aggregate(salary ~ department, data = my_data_frame, FUN = mean)
+
+# Grouping data by a variable and calculating summary statistics
+grouped_data &lt;- group_by(my_data_frame, department)
+summarised_data &lt;- summarise(grouped_data, average_salary = mean(salary))
+
+</code></pre>
+
+<h2>14. if
+</h2>
+<p>It allows the execution of a block of code only if the specified condition evaluates to true.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition) {
+     # Code block  
+}
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+a &lt;- 10
+
+if (a > 0) {
+     print("a is positive number")
+}
+
+# [1]"a is positive number"
+</code></pre>
+
+<h2>15. else
+</h2>
+<p>The "else" statement is used in conjunction with the "if" statement to provide an alternative code block to be executed when the specified condition evaluates to false.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition) {
+     # Code block  
+} else {
+     # Code block 
+}
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+a &lt;- -5
+
+if (a > 0) {
+     print("a is positive")
+} else {
+     print("a is non-positive")
+}
+
+# [1] "a is non-positive"
+</code></pre>
+
+<h2>16. elif
+</h2>
+<p>In R, the "elif" statement does not exist. Instead, you can use nested "if" and "else" statements to handle multiple conditions. Each nested "if" statement can have its own condition to evaluate.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+if (condition1) {
+     # Code block  
+} else if (condition2) {
+     # Code block  
+} else {
+     # Code block  
+}
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+a &lt;- 0
+
+if (a > 0) {
+     print("x is positive")
+} else if (a &lt; 0) {
+     print("a is negative")
+} else {
+     print("a is zero")
+}
+    
+# [1] "a is zero"
+</code></pre>
+
+<h2>17. for</h2>
+<p>A "for" loop is a control flow statement used to iterate over a sequence of values or elements. It allows executing a block of code repeatedly for a specified number of times or until a condition is met.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+for (variable in sequence) {
+     # Code block  
+}
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+for (i in 1:5) {
+     print(i)
+}   
+
+# [1] 1
+# [1] 2
+# [1] 3
+# [1] 4
+# [1] 5
+</code></pre>
+
+
+<h2>18. while
+</h2>
+<p>A "while" loop is a control flow statement used to repeatedly execute a block of code as long as a given condition remains true. It allows for continuous iteration until the condition becomes <strong>false.</strong></p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+while (condition) {
+     # Code block 
+}
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+i &lt;- 1
+
+while (i &lt;= 5) {
+     print(i)
+     i &lt;- i + 1
+}
+ 
+# [1] 1
+# [1] 2
+# [1] 3
+# [1] 4
+# [1] 5
+</code></pre>
+
+
+<h2>19. repeat
+</h2>
+<p>A "repeat" loop is a control flow statement used to execute a block of code indefinitely until a specific condition is met. It provides a way to create an infinite loop that must be manually terminated using the "break" statement.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+repeat {
+     # Code block  
+     if (condition) {
+          break  #To terminate the loop
+     }
+}
+        
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+i &lt;- 1
+
+repeat {
+     print(i)
+     i &lt;- i + 1
+
+     if (i > 5) {
+     break
+     }
+}
+
+# [1] 1
+# [1] 2
+# [1] 3
+# [1] 4
+# [1] 5
+</code></pre>
+
+<h2>20. break and next
+</h2>
+<p>he "break" and "next" statements are control flow statements used within loops to alter the flow of execution. "break" is used to exit the current loop completely, while "next" is used to skip the current iteration and move to the next iteration.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# break statement
+for (variable in sequence) {
+     if (condition) {
+     break  # Exit the loop
+     }
+}
+
+# next statement
+for (variable in sequence) {
+     if (condition) {
+     next  # Skip the current iteration and move to the next
+     }
+}
+     
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+print("break statement")
+for (i in 1:10) {
+     if (i == 5) {
+          break  # Exit the loop when i is 5
+     }
+     print(i)
+}
+print("next statement: ")
+for (i in 1:10) {
+     if (i %% 2 == 0) {
+          next  # Skip even numbers
+     }
+     print(i)
+}
+  
+# [1] "break statement"
+# [1] 1
+# [1] 2
+# [1] 3
+# [1] 4
+# [1] "next statement: "
+# [1] 1
+# [1] 3
+# [1] 5
+# [1] 7
+# [1] 9
+</code></pre>
+ 
+
+
+<h2>21. Functions
+</h2>
+<p>Functions in R are reusable blocks of code that perform a specific task. They accept input values, called arguments or parameters, and return output values. Functions allow for modular and organized programming.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Function definition
+function_name &lt;- function(arg1, arg2, ...) {
+     # Code block to perform specific task
+     # Return output value (if applicable)
+}
+
+# Function call
+result &lt;- function_name(value1, value2, ...)
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Function definition to calculate the square of a number
+square &lt;- function(x) {
+     return(x^2)
+}
+
+# Function call
+result &lt;- square(5)
+print(result)  # Output: 25
+     
+</code></pre>
+
+<h2>22. Reading and Writing CSV Files
+</h2>
+<p> CSV (Comma-Separated Values) files are a common file format used to store tabular data. In R, you can read data from a CSV file into a data frame or write data from a data frame to a CSV file.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Reading CSV file into a data frame
+data_frame &lt;- read.csv("file.csv")
+
+# Writing data frame to a CSV file
+write.csv(data_frame, "file.csv", row.names = FALSE)
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Reading CSV file into a data frame
+my_data &lt;- read.csv("data.csv")
+
+# Writing data frame to a CSV file
+write.csv(my_data, "output.csv", row.names = FALSE)
+
+</code></pre>
+
+
+<h2>23. Reading and Writing Excel Files
+</h2>
+<p>Excel files, with the extension .xlsx or .xls, are widely used for storing and managing tabular data. In R, you can read data from an Excel file into a data frame or write data from a data frame to an Excel file.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Reading Excel file into a data frame
+library(readxl)
+data_frame &lt;- read_excel("file.xlsx")
+
+# Writing data frame to an Excel file
+library(writexl)
+write_xlsx(data_frame, "file.xlsx")
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Reading Excel file into a data frame
+library(readxl)
+my_data &lt;- read_excel("data.xlsx")
+
+# Writing data frame to an Excel file
+library(writexl)
+write_xlsx(my_data, "output.xlsx")
+</code></pre>
+
+<h2>24. Base Graphics
+</h2>
+<p>Base Graphics is a built-in graphics system in R that allows you to create plots and visualizations. It provides a wide range of functions to create various types of plots, such as scatter plots, line plots, bar plots, histograms, etc.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Scatter plot
+x &lt;- c(1, 2, 3, 4, 5)
+y &lt;- c(2, 4, 6, 8, 10)
+plot(x, y, type = "p", main = "Scatter Plot", xlab = "X", ylab = "Y")
+
+# Bar plot
+data &lt;- c(10, 20, 15, 25, 30)
+barplot(data, main = "Bar Plot", xlab = "Category", ylab = "Value")
+
+# Histogram
+values &lt;- rnorm(100)
+hist(values, main = "Histogram", xlab = "Values", ylab = "Frequency")
+
+</code></pre>
+
+
+<h2>25. ggplot2 Package
+</h2>
+<p>ggplot2 is a popular data visualization package in R that provides an implementation of the Grammar of Graphics. It offers a powerful and flexible system for creating high-quality and customizable plots. ggplot2 uses a layered approach to construct plots, allowing for easy customization and complex visualizations.
+</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+library(ggplot2)
+
+# Scatter plot
+df &lt;- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 6, 8, 10))
+ggplot(df, aes(x, y)) + geom_point() + ggtitle("Scatter Plot") +
+     xlab("X") + ylab("Y")
+
+# Bar plot
+df &lt;- data.frame(category = c("A", "B", "C", "D", "E"), value = c(10, 20, 15, 25, 30))
+ggplot(df, aes(category, value)) + geom_bar(stat = "identity") +
+     ggtitle("Bar Plot") + xlab("Category") + ylab("Value")
+
+# Histogram
+df <- data.frame(values = rnorm(100))
+ggplot(df, aes(values)) + geom_histogram() +
+     ggtitle("Histogram") + xlab("Values") + ylab("Frequency")
+
+</code></pre>
+
+
+<h2>26. Plotly Package
+</h2>
+<p>Plotly is an interactive and web-based data visualization package in R. It allows you to create interactive and dynamic plots that can be easily shared and embedded in web applications or presentations. Plotly supports various types of plots, including scatter plots, line plots, bar plots, heatmaps, and more.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+library(plotly)
+
+# Scatter plot
+df &lt;- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 6, 8, 10))
+plot_ly(df, x = ~x, y = ~y, type = "scatter", mode = "markers") %>%
+     layout(title = "Scatter Plot", xaxis = list(title = "X"), yaxis = list(title = "Y"))
+
+# Bar plot
+df &lt;- data.frame(category = c("A", "B", "C", "D", "E"), value = c(10, 20, 15, 25, 30))
+plot_ly(df, x = ~category, y = ~value, type = "bar") %>%
+     layout(title = "Bar Plot", xaxis = list(title = "Category"), yaxis = list(title = "Value"))
+
+# Histogram
+df &lt;- data.frame(values = rnorm(100))
+plot_ly(df, x = ~values, type = "histogram") %>%
+     layout(title = "Histogram", xaxis = list(title = "Values"), yaxis = list(title = "Frequency"))
+
+</code></pre>
+
+
+<h2>27. Interactive Visualizations
+</h2>
+<p>Interactive visualizations in data analysis refer to the creation of dynamic and engaging visual representations of data that allow users to explore and interact with the information. These visualizations often include interactive features such as zooming, panning, filtering, tooltips, and more, enabling users to gain deeper insights and discover patterns in the data.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+library(plotly)
+
+# Create a data frame
+df &lt;- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 6, 8, 10))
+
+# Create an interactive scatter plot
+plot_ly(df, x = ~x, y = ~y, mode = "markers") %>%
+     layout(title = "Interactive Scatter Plot", xaxis = list(title = "X"), yaxis = list(title = "Y"))
+
+</code></pre>
+
+
+<h2>28. Descriptive Statistics
+</h2>
+<p> Descriptive statistics involves summarizing and describing the main characteristics of a dataset. It provides measures such as central tendency (mean, median, mode) and variability (range, variance, standard deviation), as well as other statistical quantities, to gain insights into the data and understand its distribution and properties.</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Create a numerical vector
+values &lt;- c(10, 20, 15, 25, 30)
+
+# Calculate descriptive statistics
+mean_value &lt;- mean(values)
+median_value &lt;- median(values)
+variance_value &lt;- var(values)
+sd_value &lt;- sd(values)
+
+# Print the results
+print(mean_value)     # Mean
+print(median_value)   # Median
+print(variance_value) # Variance
+print(sd_value)       # Standard deviation
+
+# Output: 
+
+# [1] 20
+# [1] 20
+# [1] 62.5
+# [1] 7.905694
+</code></pre>
+
+
+
+<h2>29. Hypothesis Testing</h2>
+<p>Hypothesis testing is a statistical technique used to make inferences or draw conclusions about a population based on sample data. It involves formulating a null hypothesis (H0) and an alternative hypothesis (HA), collecting and analyzing the data, and determining the statistical significance to accept or reject the null hypothesis.</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Create two numeric vectors
+group1 &lt;- c(10, 15, 12, 18, 20)
+group2 &lt;- c(13, 16, 11, 19, 17)
+
+# Perform an independent t-test
+t_test &lt;- t.test(group1, group2)
+
+# Print the results
+print(t_test)
+ 
+Welch Two Sample t-test
+
+# Output: 
+# Welch Two Sample t-test
+
+
+# data:  group1 and group2
+# t = -0.085749, df = 7.5294, p-value = 0.9339
+# alternative hypothesis: true difference in means is not equal to 0
+# 95 percent confidence interval:
+#  -5.637558  5.237558
+# sample estimates:
+# mean of x mean of y 
+#      15.0      15.2 
+</code></pre>
+
+
+<h2>30. Regression Analysis
+</h2>
+<p>Regression analysis is a statistical technique used to model the relationship between a dependent variable and one or more independent variables. It aims to understand how the independent variables impact the dependent variable and make predictions or infer relationships based on the obtained regression model.</p>
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Create a data frame with variables
+df &lt;- data.frame(x = c(1, 2, 3, 4, 5), y = c(2, 4, 6, 8, 10))
+
+# Fit a linear regression model
+model &lt;- lm(y ~ x, data = df)
+
+# Print the regression model summary
+summary(model)
+</code></pre>
+
+<h2>31. ANOVA
+</h2>
+<p>ANOVA is a statistical technique used to compare the means of two or more groups in order to determine if there are significant differences between them. It assesses the variation between group means and within-group variation to determine if the observed differences are due to random chance or if they are statistically significant.</p>
+
+ 
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Create data vectors for each group
+group1 &lt;- c(10, 15, 12, 18, 20)
+group2 &lt;- c(13, 16, 11, 19, 17)
+group3 &lt;- c(8, 9, 14, 11, 15)
+
+# Perform one-way ANOVA
+anova_result &lt;- aov(c(group1, group2, group3) ~ c(rep("Group 1", 5), rep("Group 2", 5), rep("Group 3", 5)))
+
+# Print the ANOVA results
+summary(anova_result)
+     
+</code></pre>
+
+<h2>32. Installing Packages
+</h2>
+<p>Installing packages in R involves downloading and installing additional libraries or extensions that provide additional functionality for specific tasks, such as data manipulation, visualization, statistical analysis, and more. Packages are collections of functions, data, and documentation that can be easily installed and used in R.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Installing a package from CRAN (Comprehensive R Archive Network)
+install.packages("package_name")
+
+# Installing a package from a specific repository
+install.packages("package_name", repos = "http://custom_repo_url")
+
+# Installing a package from a local file
+install.packages("path/to/package_file.tar.gz", repos = NULL, type = "source")
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Installing the "dplyr" package from CRAN
+install.packages("dplyr")
+
+# Installing the "ggplot2" package from a custom repository
+install.packages("ggplot2", repos = "http://custom_repo_url")
+
+# Installing a package from a local file
+install.packages("path/to/my_package.tar.gz", repos = NULL, type = "source")
+
+</code></pre>
+
+
+<h2>33. Loading Packages
+</h2>
+<p> Loading packages in R involves making the installed packages available for use within the current R session. Once a package is loaded, its functions, data, and other resources can be accessed and utilized in the R code. Loading a package is required before using any of its functions or objects.</p>
+
+<h3>Syntax: </h3>
+<pre><code class="language-js">
+# Loading a package
+library(package_name)
+
+# Loading a package and assigning an alias to it
+library(package_name, alias = "alias_name")
+
+</code></pre>
+<h3>Example: </h3>
+<pre><code class="language-js">
+# Loading the "dplyr" package
+library(dplyr)
+
+# Loading the "ggplot2" package and assigning an alias "gg"
+library(ggplot2, alias = "gg")
+     
+</code></pre>
+
+</section>
+     </main>
+     <footer>
+          <h3 id="logo"><a href="../index.html">LangThiru</a></h3>
+          <p>Copyright &#169;	 2023 langthiru. All rights reserved</p>
+          <a href="../about/privacy-policy.html">Privacy Policy</a>
+          <a href="../about/terms-of-use.html">Terms of Use</a>
+     </footer>
+     <script src="../source/prism.js"></script>
+</body>
+</html>
